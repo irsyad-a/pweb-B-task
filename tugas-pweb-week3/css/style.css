@@ -864,9 +864,16 @@
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
 	-o-transition: all 300ms ease;
-	transition: all 300ms ease;	
+	transition: all 300ms ease;
 	border:3px solid var(--main-color);
 	background-color:var(--white-color);
+	text-indent: -9999px;
+}
+
+.process-one .owl-nav .owl-prev::before{
+	content: '\f104';
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
 }
 
 .process-one .owl-nav .owl-next{
@@ -883,9 +890,16 @@
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
 	-o-transition: all 300ms ease;
-	transition: all 300ms ease;	
+	transition: all 300ms ease;
 	border:3px solid var(--main-color);
 	background-color:var(--white-color);
+	text-indent: -9999px;
+}
+
+.process-one .owl-nav .owl-next::before{
+	content: '\f105';
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 900;
 }
 
 .process-one .owl-nav .owl-prev:hover,
@@ -953,20 +967,20 @@
 	right:0px;
 	bottom:0px;
 	z-index:-1;
-	background-color:#f78b8b;
+	background-color:var(--main-color);
 	clip-path: polygon(90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
 }
 
 .process-one_year.style-two:before{
-	background-color:#d83e3e;
+	background-color:var(--main-color);
 }
 
 .process-one_year.style-three:before{
-	background-color:#c20b0b;
+	background-color:var(--main-color);
 }
 
 .process-one_year.style-four:before{
-	background-color:#720b0b;
+	background-color:var(--main-color);
 }
 
 .process-one_heading{

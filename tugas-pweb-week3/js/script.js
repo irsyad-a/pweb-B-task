@@ -383,4 +383,26 @@
     });
 
 
+    // Four Item Carousel
+    if ($('.four-item-carousel').length) {
+        $('.four-item-carousel').owlCarousel({
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            loop:true,
+            margin:20,
+            nav:true,
+            smartSpeed: 500,
+            autoplay: true,
+            responsive:{
+                0:{ items:1 },
+                480:{ items:1 },
+                600:{ items:2 },
+                800:{ items:2 },
+                1024:{ items:3 },
+                1200:{ items:4 }
+            }
+        });
+    }
+
+
 })(window.jQuery);
