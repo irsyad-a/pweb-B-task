@@ -57,32 +57,66 @@ Website Profil Sekolah MAN IC Bangka Tengah memiliki tujuan sebagai berikut:
 
 ## 5. Struktur Website
 
-Website memiliki 6 halaman utama sesuai struktur navigasi dan file HTML berikut:
+Website memiliki 6 halaman utama sesuai struktur navigasi dan file HTML berikut.
 
-Website Profil Sekolah MAN IC Bangka Tengah
-├── Beranda (index.html)
-│   ├── Hero Slider
-│   ├── Sambutan Kepala Sekolah
-│   ├── Keunggulan Sekolah / Mengapa Memilih MAN IC
-│   ├── Visi & Misi
-│   ├── Kegiatan Madrasah
-│   ├── Statistik Sekolah
-│   └── Berita Terbaru
-├── Profil (profile.html)
-│   ├── Tentang Kami
-│   └── Sejarah & Timeline Perkembangan
-├── Akademik (academic.html)
-│   ├── Kurikulum
-│   ├── Program Unggulan
-│   └── Prestasi
-├── Jurusan (majors.html)
-│   └── Informasi Pilihan Peminatan / Program Studi
-├── Blog (blog.html)
-│   └── Berita & Artikel
-└── Kontak (contact.html)
-    ├── Formulir Kontak
-    ├── Informasi Kontak Resmi
-    └── Peta Lokasi
+### 5.1 Beranda — `index.html`
+
+Halaman beranda berfungsi sebagai halaman utama website yang memperkenalkan MAN IC Bangka Tengah secara ringkas dan menarik.
+
+Section yang ditampilkan:
+
+1. Hero Slider.
+2. Sambutan Kepala Sekolah.
+3. Keunggulan Sekolah / Mengapa Memilih MAN IC.
+4. Visi & Misi.
+5. Kegiatan Madrasah.
+6. Statistik Sekolah.
+7. Berita Terbaru.
+
+### 5.2 Profil — `profile.html`
+
+Halaman profil berisi informasi identitas dan latar belakang MAN IC Bangka Tengah.
+
+Section yang ditampilkan:
+
+1. Tentang Kami.
+2. Sejarah & Timeline Perkembangan.
+
+### 5.3 Akademik — `academic.html`
+
+Halaman akademik menampilkan informasi pembelajaran, program sekolah, dan pencapaian siswa.
+
+Section yang ditampilkan:
+
+1. Kurikulum.
+2. Program Unggulan.
+3. Prestasi.
+
+### 5.4 Jurusan — `majors.html`
+
+Halaman jurusan menampilkan informasi mengenai pilihan peminatan atau program studi yang tersedia.
+
+Section yang ditampilkan:
+
+1. Informasi Pilihan Peminatan / Program Studi.
+
+### 5.5 Blog — `blog.html`
+
+Halaman blog menampilkan kumpulan berita dan artikel sekolah.
+
+Section yang ditampilkan:
+
+1. Berita & Artikel.
+
+### 5.6 Kontak — `contact.html`
+
+Halaman kontak menyediakan media bagi pengunjung untuk menghubungi pihak sekolah.
+
+Section yang ditampilkan:
+
+1. Formulir Kontak.
+2. Informasi Kontak Resmi.
+3. Peta Lokasi.
 
 ---
 
