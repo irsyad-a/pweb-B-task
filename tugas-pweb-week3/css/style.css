@@ -12840,3 +12840,347 @@
     font-size:10px;
     font-family: 'Font Awesome 5 Pro';
 }
+
+/***
+
+====================================================================
+    Curriculum Section
+====================================================================
+
+***/
+
+.curriculum-section{
+    position:relative;
+    padding:100px 0px 70px;
+}
+
+.curriculum-section-pattern{
+    position:absolute;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    width:798px;
+    background-repeat:no-repeat;
+}
+
+.curriculum-info-column{
+    position:relative;
+    margin-bottom:var(--margin-bottom-30);
+}
+
+.curriculum-info-inner{
+    position:relative;
+}
+
+.curriculum-image-column{
+    position:relative;
+    margin-bottom:var(--margin-bottom-30);
+}
+
+.curriculum-image-inner{
+    position:relative;
+}
+
+/* Section Title Styles for Curriculum */
+.section-title{
+    position:relative;
+    z-index:1;
+    margin-bottom:var(--margin-bottom-45);
+}
+
+.section-title-label{
+    position:relative;
+    font-weight:700;
+    padding:10px 30px;
+    border-radius:50px;
+    display:inline-block;
+    color:var(--color-nineteen);
+    text-transform:capitalize;
+    font-size:var(--font-16);
+    background-color:var(--color-twentytwo);
+}
+
+.section-title.light .section-title-label{
+    background-color:rgba(255,255,255,0.1);
+    color:var(--white-color);
+}
+
+.section-title-heading{
+    position:relative;
+    font-weight:700;
+    line-height:60px;
+    font-size:var(--font-46);
+    text-transform:capitalize;
+    margin-top:var(--margin-top-20);
+    font-family:var(--font-family-Libre);
+}
+
+.section-title.light .section-title-heading{
+    color:var(--white-color);
+}
+
+.section-title-text{
+    line-height:30px;
+    font-size:var(--font-18);
+    color:var(--color-twentyone);
+    margin-top:var(--margin-top-20);
+}
+
+.section-title.light .section-title-text{
+    color:var(--color-thirteen);
+}
+
+/***
+
+====================================================================
+    Featured Programs Section
+====================================================================
+
+***/
+
+.featured-programs{
+    position:relative;
+    padding:90px 0px 0px;
+}
+
+.featured-programs .auto-container{
+    max-width:1800px;
+}
+
+.featured-programs-pattern{
+    position:absolute;
+    left:0px;
+    top:0px;
+    right:0px;
+    height:500px;
+    background-color:var(--black-color);
+}
+
+.featured-programs-pattern-secondary{
+    position: absolute;
+    left: 0px;
+    top: 540px;
+    z-index:-1;
+    width: 525px;
+    height: 1006px;
+    background-repeat: no-repeat;
+}
+
+.program-card{
+    position:relative;
+    margin-bottom:var(--margin-bottom-30);
+}
+
+.program-card-inner{
+    position:relative;
+    padding-bottom:var(--padding-bottom-50);
+}
+
+.program-card-image{
+    position:relative;
+}
+
+.program-card-image img{
+    position:relative;
+    width:100%;
+    display:block;
+    filter: grayscale(100%);
+    transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.program-card-image:before{
+    position:absolute;
+    content:'';
+    left:0px;
+    top:200px;
+    bottom:0px;
+    right:0px;
+    z-index:1;
+    transition: all 900ms ease;
+    -moz-transition: all 900ms ease;
+    -webkit-transition: all 900ms ease;
+    -ms-transition: all 900ms ease;
+    -o-transition: all 900ms ease;
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0)), color-stop(100, rgba(0,0,0,1)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.program-card-content{
+    position:absolute;
+    left:30px;
+    right:30px;
+    bottom:-60px;
+    z-index:1;
+    padding:30px 25px;
+    background-color:var(--white-color);
+    box-shadow:0px 0px 15px rgba(0,0,0,0.10);
+    transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -webkit-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+}
+
+.program-card-category{
+    position:relative;
+    font-size:var(--font-16);
+    color:var(--color-twentysix);
+}
+
+.program-card-heading{
+    position:relative;
+    font-weight:700;
+    line-height:32px;
+    margin-top:var(--margin-top-10);
+}
+
+.program-card-heading a{
+    position:relative;
+    color:var(--black-color);
+}
+
+.program-card-heading a:hover{
+    color:var(--color-twentyfive);
+}
+
+.program-card-plus{
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    background-color:var(--main-color);
+    color:var(--white-color);
+    font-size:var(--font-18);
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.program-card-plus:hover{
+    background-color:var(--color-twentysix);
+}
+
+.featured-programs .sec-title.style-two.light .sec-title_title{
+    color:var(--main-color);
+}
+
+.featured-programs .sec-title.style-two.light .sec-title_title:before,
+.featured-programs .sec-title.style-two.light .sec-title_title:after{
+    background-color:var(--main-color);
+}
+
+.featured-programs .sec-title.style-two.light .sec-title_heading{
+    color:var(--white-color);
+}
+
+.featured-programs .sec-title.style-two.light .sec-title_text{
+    color:var(--color-thirteen);
+}
+
+/***
+
+====================================================================
+    Achievement Section
+====================================================================
+
+***/
+
+.achievement-section{
+    position:relative;
+    padding:90px 0px 70px;
+}
+
+.achievement-card{
+    position:relative;
+    margin-bottom:var(--margin-bottom-30);
+}
+
+.achievement-card-inner{
+    position:relative;
+    overflow:hidden;
+    border-radius:0;
+}
+
+.achievement-card-image{
+    position:relative;
+}
+
+.achievement-card-image img{
+    position:relative;
+    width:100%;
+    display:block;
+}
+
+.achievement-card-image:before{
+    position:absolute;
+    content:'';
+    left:0px;
+    top:50px;
+    bottom:0px;
+    right:0px;
+    z-index:1;
+    opacity: 0.70;
+    transition: all 900ms ease;
+    -moz-transition: all 900ms ease;
+    -webkit-transition: all 900ms ease;
+    -ms-transition: all 900ms ease;
+    -o-transition: all 900ms ease;
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0)), color-stop(100, rgba(0,0,0,1)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.achievement-card-overlay{
+    position:absolute;
+    left:40px;
+    right:40px;
+    bottom:35px;
+    z-index:1;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.achievement-card-date{
+    position:relative;
+    z-index: 2;
+    display:inline-block;
+    font-size:var(--font-16);
+    color:var(--white-color);
+    margin-bottom:var(--margin-bottom-10);
+}
+
+.achievement-card-heading{
+    position:relative;
+    font-weight:700;
+    z-index: 2;
+    font-family:var(--font-family-Libre);
+}
+
+.achievement-card-heading a{
+    position:relative;
+    color:var(--white-color);
+}
+
+.achievement-card-heading a:hover{
+    color:var(--main-color);
+}
+
