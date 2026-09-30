@@ -12186,32 +12186,32 @@
 }
 
 /* Visi Misi Section */
-.visi-misi-section{
+.vision-mission-section{
 	position:relative;
 	padding:80px 0px 50px;
 }
 
-.visi-misi-block{
+.vision-mission-block{
 	position:relative;
 	margin-bottom:30px;
 }
 
-.visi-misi-block-inner{
+.vision-mission-block-inner{
 	position:relative;
 	box-shadow:0px 0px 20px rgba(0,0,0,0.10);
 }
 
-.visi-misi-block-image{
+.vision-mission-block-image{
 	position:relative;
 }
 
-.visi-misi-block-image img{
+.vision-mission-block-image img{
 	position:relative;
 	width:100%;
 	display:block;
 }
 
-.visi-misi-block-content{
+.vision-mission-block-content{
 	position:absolute;
 	left:0px;
 	top:0px;
@@ -12221,7 +12221,7 @@
 	border-bottom:5px solid var(--main-color);
 }
 
-.visi-misi-block-content:before{
+.vision-mission-block-content:before{
 	content: '';
     position: absolute;
     top: 0;
@@ -12232,24 +12232,30 @@
 	background: linear-gradient(to right, #FFFFFF 70%, rgba(0,0,0,0) 100%);
 }
 
-.visi-misi-block-icon{
+.vision-mission-block-icon{
 	position:relative;
 	z-index:1;
 	line-height:1em;
 	display:inline-block;
 	color:var(--main-color);
 	font-size:var(--font-50);
-	font-family: "Flaticon";
+	font-weight: 900;
+	font-style: normal;
 }
 
-.visi-misi-block-heading{
+.vision-mission-block-icon i {
+    font-style: normal;
+    font-weight: 900;
+}
+
+.vision-mission-block-heading{
 	position:relative;
 	font-weight:700;
 	color:var(--color-three);
 	margin-top:15px;
 }
 
-.visi-misi-block-text{
+.vision-mission-block-text{
 	position:relative;
 	line-height:26px;
 	max-width:280px;
@@ -12309,8 +12315,15 @@
     display: inline-block;
     color: var(--white-color);
     font-size: var(--font-40);
-    font-family: "Flaticon";
+    font-weight: 900;
     background-color: var(--main-color);
+    text-align: center;
+}
+
+.excellence-block-icon i {
+    font-style: normal;
+    font-weight: 900;
+}
     flex-shrink: 0;
 }
 
@@ -13182,5 +13195,229 @@
 
 .achievement-card-heading a:hover{
     color:var(--main-color);
+}
+
+/***
+
+====================================================================
+    Blog Section
+====================================================================
+
+***/
+
+.blog-section{
+    position:relative;
+    padding:100px 0px 100px;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+.blog-section .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-card{
+    position:relative;
+    margin-bottom:var(--margin-bottom-30);
+    display: flex;
+}
+
+.blog-card-inner{
+    position:relative;
+    background:var(--white-color);
+    box-shadow:0px 10px 30px rgba(0,0,0,0.10);
+    transition:all 500ms ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card-inner:hover{
+    box-shadow:0px 15px 40px rgba(0,0,0,0.15);
+}
+
+.blog-card-image{
+    position:relative;
+    overflow:hidden;
+    flex-shrink: 0;
+}
+
+.blog-card-image img{
+    position:relative;
+    width:100%;
+    height: 220px;
+    object-fit: cover;
+    display:block;
+    transition:all 500ms ease;
+}
+
+.blog-card-inner:hover .blog-card-image img{
+    transform:scale(1.05);
+}
+
+.blog-card-content{
+    position:relative;
+    padding:30px 30px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card-date{
+    position:relative;
+    display:inline-block;
+    font-size:var(--font-16);
+    color:var(--white-color);
+    background:var(--main-color);
+    padding:8px 20px;
+    font-weight:500;
+    margin-bottom:var(--margin-bottom-15);
+}
+
+.blog-card-date span{
+    position:relative;
+    margin-left:5px;
+    font-size:var(--font-14);
+    opacity:0.80;
+}
+
+.blog-card-meta{
+    position:relative;
+    margin-bottom:var(--margin-bottom-15);
+    padding:0px;
+    list-style:none;
+}
+
+.blog-card-meta li{
+    position:relative;
+    display:inline-block;
+    font-size:var(--font-14);
+    color:var(--color-eight);
+    margin-right:20px;
+}
+
+.blog-card-meta li::before{
+    position:absolute;
+    content:'';
+    left:0px;
+    top:8px;
+    width:6px;
+    height:6px;
+    background:var(--main-color);
+    border-radius:50%;
+}
+
+.blog-card-meta li:first-child::before{
+    display:none;
+}
+
+.blog-card-heading{
+    position:relative;
+    font-weight:700;
+    margin-bottom:var(--margin-bottom-15);
+    font-family:var(--font-family-Libre);
+    font-size:var(--font-22);
+    line-height:1.4;
+}
+
+.blog-card-heading a{
+    position:relative;
+    color:var(--black-color);
+    transition:all 300ms ease;
+}
+
+.blog-card-heading a:hover{
+    color:var(--main-color);
+}
+
+.blog-card-excerpt{
+    position:relative;
+    font-size:var(--font-16);
+    color:var(--color-eight);
+    line-height:1.8;
+    margin-bottom:var(--margin-bottom-20);
+    flex-grow: 1;
+}
+
+.blog-card-read-more{
+    position:relative;
+    display:inline-block;
+    font-size:var(--font-14);
+    font-weight:700;
+    color:var(--main-color);
+    text-transform:uppercase;
+    letter-spacing:1px;
+    transition:all 300ms ease;
+    margin-top: auto;
+}
+
+.blog-card-read-more::after{
+    position:absolute;
+    content:'';
+    left:0px;
+    bottom:-2px;
+    width:0%;
+    height:2px;
+    background:var(--main-color);
+    transition:all 300ms ease;
+}
+
+.blog-card-read-more:hover::after{
+    width:100%;
+}
+
+.blog-card-read-more:hover{
+    color:var(--main-color);
+}
+
+/***
+
+====================================================================
+    Blog Section Pagination
+====================================================================
+
+***/
+
+.pagination-outer{
+    position:relative;
+    margin-top:var(--margin-top-50);
+}
+
+.pagination-outer .pagination{
+    position:relative;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+.pagination-outer .pagination li{
+    position:relative;
+    margin:0px 5px;
+}
+
+.pagination-outer .pagination li a{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:50px;
+    height:50px;
+    font-size:var(--font-16);
+    font-weight:500;
+    color:var(--black-color);
+    background:var(--white-color);
+    border:1px solid var(--color-thirtyeight);
+    transition:all 300ms ease;
+}
+
+.pagination-outer .pagination li a:hover,
+.pagination-outer .pagination li.active a{
+    background:var(--main-color);
+    color:var(--white-color);
+    border-color:var(--main-color);
 }
 
