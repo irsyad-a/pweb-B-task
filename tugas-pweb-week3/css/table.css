@@ -1,0 +1,49 @@
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--head);
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f8fbff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .footer-note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
