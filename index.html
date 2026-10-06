@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id" class="light scroll-smooth" data-sidebar="" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Manajemen Siswa FTEIC ITS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Form dan tabel pengelolaan data mahasiswa FTEIC ITS" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Css -->
+
+    <link rel="stylesheet" href="assets/libs/mobius1-selectr/selectr.min.css">
+    <link rel="stylesheet" href="assets/libs/simple-datatables/style.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body data-layout-mode="light" data-sidebar-size="default" data-theme-layout="vertical" class="bg-[#ffffff] dark:bg-gray-900">
+
+    <!-- Topbar -->
+    <nav id="topbar" class="topbar border-b dark:border-slate-700/40 fixed inset-x-0 duration-300 block print:hidden z-50">
+        <div class="mx-0 flex max-w-full flex-wrap items-center lg:mx-auto">
+            <div class="flex items-center ltr:mx-4 rtl:mx-4 py-3">
+                <h1 class="font-semibold text-slate-700 dark:text-slate-200">Manajemen Siswa FTEIC ITS</h1>
+            </div>
+            <div class="order-1 ltr:ms-auto rtl:ms-0 rtl:me-auto flex items-center md:order-2">
+                <div class="ltr:me-4 rtl:me-0 rtl:ms-4">
+                    <button id="toggle-theme" class="flex rounded-full md:me-0 relative">
+                        <span data-feather="moon" class="top-icon w-5 h-5 light"></span>
+                        <span data-feather="sun" class="top-icon w-5 h-5 dark hidden"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ltr:flex flex-1 rtl:flex-row-reverse">
+        <div class="page-wrapper relative ltr:ml-auto rtl:mr-auto rtl:ml-0 px-4 pt-[54px] duration-300">
+
+            <div class="xl:w-full min-h-[calc(100vh-138px)] relative pt-4 pb-14">
+                <div class="layout-2col mb-4">
+                    <div class="col-form">
+
+                        <!-- Card Form -->
+                        <div class="card-equal bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40 rounded-md w-full relative mb-4">
+                            <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                <div class="flex-none md:flex">
+                                    <h4 id="formTitle" class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Form Mahasiswa</h4>
+                                </div>
+                            </div><!--end header-title-->
+                            <div class="flex-auto p-4">
+                                <form id="formMahasiswa" novalidate>
+                                    <div class="mb-2">
+                                        <label for="nama" class="font-medium text-sm text-slate-600 dark:text-slate-400">Nama</label>
+                                        <input type="text" id="nama" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Nama lengkap" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nrp" class="font-medium text-sm text-slate-600 dark:text-slate-400">NRP</label>
+                                        <input type="text" id="nrp" inputmode="numeric" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="5025221000" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="departemen" class="font-medium text-sm text-slate-600 dark:text-slate-400">Departemen</label>
+                                        <select id="departemen" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <option value="">Pilih Departemen</option>
+                                            <option>Teknik Elektro</option>
+                                            <option>Teknik Informatika</option>
+                                            <option>Sistem Informasi</option>
+                                            <option>Teknologi Informasi</option>
+                                            <option>Teknik Komputer</option>
+                                            <option>Teknik Biomedik</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="prodi" class="font-medium text-sm text-slate-600 dark:text-slate-400">Prodi</label>
+                                        <select id="prodi" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
+                                            <option value="">Pilih Prodi</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="alamat" class="font-medium text-sm text-slate-600 dark:text-slate-400">Alamat</label>
+                                        <input type="text" id="alamat" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="Alamat lengkap" required>
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="email" class="font-medium text-sm text-slate-600 dark:text-slate-400">Email</label>
+                                        <input type="email" id="email" class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700" placeholder="name@its.ac.id" required>
+                                    </div>
+
+                                    <button type="submit" id="btnSubmit" class="inline-block focus:outline-none text-primary-500 hover:bg-primary-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-primary-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-primary-500  text-sm font-medium py-1 px-3 rounded mb-1">Submit</button>
+                                    <button type="button" id="btnCancel" class="inline-block focus:outline-none text-red-500 hover:bg-red-500 hover:text-white bg-transparent border border-gray-200 dark:bg-transparent dark:text-red-500 dark:hover:text-white dark:border-gray-700 dark:hover:bg-red-500  text-sm font-medium py-1 px-3 rounded mb-1">Cancel</button>
+                                </form>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col-->
+
+                    <div class="col-table">
+                        <!-- Card Table -->
+                        <div class="card-equal bg-white dark:bg-gray-900 border border-slate-200 dark:border-slate-700/40 rounded-md w-full relative mb-4">
+                            <div class="border-b border-slate-200 dark:border-slate-700/40 py-3 px-4 dark:text-slate-300/70">
+                                <div class="flex-none md:flex">
+                                    <h4 class="font-medium text-lg flex-1 self-center mb-2 md:mb-0">Data Mahasiswa</h4>
+                                </div>
+                            </div><!--end header-title-->
+                            <div class="table-card-body p-4">
+                                <div class="w-full">
+                                    <div class="table-scroll">
+                                        <table class="w-full border-collapse" id="datatable_1">
+                                            <thead class="bg-slate-100 dark:bg-slate-700/20">
+                                                <tr>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Nama</th>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">NRP</th>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Departemen</th>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Prodi</th>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Alamat</th>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Email</th>
+                                                    <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Baris diisi oleh script.js -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div><!--end card-body-->
+                        </div><!--end card-->
+                    </div><!--end col-->
+                </div><!--end inner-grid-->
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPTS -->
+    <script src="assets/libs/@popperjs/core/umd/popper.min.js"></script>
+
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/libs/@frostui/tailwindcss/frostui.js"></script>
+
+    <script src="assets/libs/simple-datatables/umd/simple-datatables.js"></script>
+    <script src="assets/libs/mobius1-selectr/selectr.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <!-- Custom Javascript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

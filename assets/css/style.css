@@ -1,0 +1,86 @@
+/* Custom styling - Manajemen Siswa FTEIC ITS */
+
+/* Tanpa sidebar: topbar & konten selebar layar penuh
+   (template memberi offset 230px untuk sidebar, di sini dinolkan) */
+.topbar,
+body[data-sidebar-size] .topbar {
+    left: 0 !important;
+    right: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+.page-wrapper,
+body[data-sidebar-size] .page-wrapper {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin-left: 0 !important;
+}
+
+/* Layout dua kolom: form di kiri, tabel di kanan (tinggi sama) */
+.layout-2col {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(0, 2fr);
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.layout-2col .col-form,
+.layout-2col .col-table {
+    min-width: 0;
+    display: flex;
+}
+
+/* Card mengisi penuh kolom sehingga tingginya sama */
+.layout-2col .card-equal {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.layout-2col .table-card-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Tabel tidak boleh keluar dari card.
+   Scroll horizontal HANYA di area tabel; kontrol "entries per page", search,
+   dan paging tetap diam di tempatnya. */
+.table-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.table-scroll .datatable-wrapper,
+.table-scroll .dataTable-wrapper {
+    max-width: 100%;
+}
+
+.table-scroll .datatable-container,
+.table-scroll .dataTable-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-scroll .datatable-top,
+.table-scroll .datatable-bottom,
+.table-scroll .dataTable-top,
+.table-scroll .dataTable-bottom {
+    position: static;
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .layout-2col {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+/* Selectr mengikuti tampilan input template */
+.selectr-container {
+    font-size: 0.875rem;
+}
