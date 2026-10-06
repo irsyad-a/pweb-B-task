@@ -1,13 +1,13 @@
-# PWEB - Form dan Frame (Tugas Manajemen Siswa)
+# Tugas Manajemen Siswa
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Proyek ini adalah implementasi tugas mata kuliah **Pemrograman Web (PWEB)** dengan materi **Form dan Frame**, yang diberikan oleh Bapak [Fajar Baskoro](https://fajarbaskoro.blogspot.com/2024/09/pweb-form-dan-frame.html). Proyek ini merupakan aplikasi web sederhana untuk **Manajemen Siswa FTEIC ITS** yang menggunakan formulir HTML untuk mengumpulkan data mahasiswa dan menampilkannya dalam bentuk tabel yang interaktif.
+Proyek ini adalah implementasi tugas mata kuliah **Pemrograman Web (PWEB)** dengan materi **Form dan Frame**. Proyek ini merupakan aplikasi web sederhana dengan judul **Manajemen Siswa FTEIC ITS** yang menggunakan formulir HTML untuk mengumpulkan data mahasiswa dan menampilkannya dalam bentuk tabel yang interaktif.
 
-## 📖 Tentang Materi
+##  Tentang Materi
 
 HTML form atau formulir HTML adalah elemen HTML yang berfungsi untuk mengumpulkan masukan dari pengguna web. Formulir HTML merupakan fitur yang dibutuhkan website untuk mengumpulkan informasi, seperti pendaftaran, login, dan pengumpulan feedback.
 
@@ -16,7 +16,7 @@ Formulir HTML dapat digunakan untuk:
 - Memastikan pengguna mendapatkan pengalaman mengunjungi website yang nyaman dan aman
 - Mengumpulkan data-data pengunjung website untuk disimpan dalam database
 
-## ✨ Fitur
+##  Fitur web
 
 - **Formulir Pendaftaran Mahasiswa**: Input data meliputi Nama, NRP, Departemen, Prodi, Alamat, dan Email.
 - **Validasi Data**: Memastikan semua field diisi dengan benar sebelum data disubmit.
@@ -30,9 +30,9 @@ Formulir HTML dapat digunakan untuk:
 - **Mode Gelap/Terang (Dark/Light Mode)**: Dukungan tema UI modern yang nyaman di mata.
 - **Dropdown Dinamis**: Pilihan Prodi akan otomatis menyesuaikan dengan Departemen yang dipilih.
 
-## 🚀 Quick Start / Cara Menjalankan
+##  Cara Menjalankan
 
-Karena proyek ini murni dibangun menggunakan HTML, CSS, dan Vanilla JavaScript (tanpa backend atau database eksternal), Anda tidak perlu menginstal server apa pun.
+Karena proyek ini murni dibangun menggunakan HTML, CSS, dan Vanilla JavaScript, Anda tidak perlu menginstal server apa pun.
 
 1. Clone repositori ini atau unduh folder proyek:
    ```bash
