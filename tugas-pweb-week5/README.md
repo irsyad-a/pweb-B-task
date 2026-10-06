@@ -30,17 +30,6 @@ Formulir HTML dapat digunakan untuk:
 - **Mode Gelap/Terang (Dark/Light Mode)**: Dukungan tema UI modern yang nyaman di mata.
 - **Dropdown Dinamis**: Pilihan Prodi akan otomatis menyesuaikan dengan Departemen yang dipilih.
 
-##  Cara Menjalankan
-
-Karena proyek ini murni dibangun menggunakan HTML, CSS, dan Vanilla JavaScript, Anda tidak perlu menginstal server apa pun.
-
-1. Clone repositori ini atau unduh folder proyek:
-   ```bash
-   git clone <url-repo-anda>
-   ```
-2. Buka folder `tugasWeb`.
-3. Klik ganda pada file `index.html` untuk membukanya di browser pilihan Anda (Chrome, Firefox, Edge, Safari).
-
 ## 🛠️ Struktur Proyek
 
 ```text
