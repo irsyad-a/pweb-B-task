@@ -1,0 +1,112 @@
+/*-----------------------------------------------------------------------------------
+
+    LibraryReg - Homepage & Public Registration Stylesheet
+    Custom style overrides and layout alignment rules
+
+-----------------------------------------------------------------------------------*/
+
+/* Normalize membership category select element height to match standard 55px inputs */
+.contact_form .form-group select.form-control,
+.contact_form .form-group select.form-select,
+.contact_form .form-group .nice-select,
+#member_type {
+    height: 55px !important;
+    min-height: 55px !important;
+    line-height: 53px !important;
+    padding: 0 20px !important;
+    font-size: 16px !important;
+    color: #170006 !important;
+    background-color: #F1F1E9 !important;
+    border-radius: 7px !important;
+    border: 1px solid transparent !important;
+    width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+.contact_form .form-group .nice-select .current {
+    line-height: 53px !important;
+    font-size: 16px !important;
+    color: #170006 !important;
+}
+
+.contact_form .form-group .nice-select .list {
+    width: 100% !important;
+    border-radius: 7px !important;
+}
+
+/* Education information card layout and spacing */
+.education-info-card {
+    background-color: var(--color-white);
+    border-radius: 15px;
+    padding: 50px;
+    border: 1px solid #ECECE4;
+}
+
+@media (max-width: 767px) {
+    .education-info-card {
+        padding: 30px;
+    }
+}
+
+.education-info-card .xb-item--list li {
+    position: relative;
+    padding-left: 32px;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--color-default);
+    margin-bottom: 16px;
+}
+
+.education-info-card .xb-item--list li span {
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* Department overview service icons */
+.xb-department .xb-item--icon {
+    height: 70px !important;
+    width: 70px !important;
+    background-color: var(--color-violet) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    margin: 0 auto 20px !important;
+    box-shadow: 0 6px 18px rgba(23, 0, 6, 0.25) !important;
+    transition: all 0.3s ease !important;
+}
+
+.xb-department .xb-item--icon svg {
+    width: 32px !important;
+    height: 32px !important;
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    display: block !important;
+    transition: all 0.3s ease !important;
+}
+
+.xb-department:hover .xb-item--icon {
+    background-color: var(--color-primary) !important;
+    transform: translateY(-4px) scale(1.05) !important;
+    box-shadow: 0 8px 22px rgba(253, 183, 20, 0.45) !important;
+}
+
+.xb-department:hover .xb-item--icon svg {
+    color: #170006 !important;
+    fill: #170006 !important;
+}
+
+/* Navigation layout: push menu items rightward with consistent button clearance */
+.header__wrap .main-menu__wrap {
+    margin-left: auto !important;
+}
+
+.header__wrap .main-menu {
+    margin-right: 35px !important;
+}
+
+.header__wrap .header-right {
+    margin-left: 10px !important;
+}

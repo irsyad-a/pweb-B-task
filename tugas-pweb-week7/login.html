@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techbar - Login & Register</title>
+
+  <!-- Remix Icon (Sesuai Referensi) -->
+  <link rel="stylesheet" href="css/remixicon.css">
+
+  <!-- Bootstrap CSS (Sesuai Referensi) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Style Content CSS (Color Palette & Tokens) -->
+  <link rel="stylesheet" href="css/style-content.css">
+
+  <!-- Style Login CSS (Khusus Halaman Login & Register) -->
+  <link rel="stylesheet" href="css/style-login.css">
+</head>
+
+<body>
+
+  <!-- ====== LOGIN PAGE SECTION (dari referensi login.html) ====== -->
+  <section class="login-page hero-part align-items-center d-flex position-relative">
+
+    <!-- Background Overlay (dari referensi) -->
+    <div class="bg-overlay"></div>
+
+    <div class="container position-relative">
+
+      <!-- Logo (teks saja) -->
+      <div class="logo mb-4 text-center">
+        <a class="fs-4 text-light fw-bold ls-1 text-decoration-none" href="content.html">TECHBAR</a>
+      </div>
+
+      <!-- ====== Bootstrap Grid System: Row & Col ====== -->
+      <!-- GSM: card login/register dipusatkan dengan col-lg-5 col-md-7 col-sm-10 mx-auto -->
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7 col-sm-10">
+
+          <div class="card p-2">
+            <div class="card-body">
+
+              <!-- Tab Toggle: Login / Register -->
+              <ul class="nav nav-tabs mb-4" id="authTab" role="tablist">
+                <li class="nav-item flex-fill text-center" role="presentation">
+                  <button class="nav-link active w-100" id="login-tab" data-bs-toggle="tab"
+                    data-bs-target="#loginPane" type="button" role="tab">
+                    <i class="ri-login-box-line me-1"></i>Log In
+                  </button>
+                </li>
+                <li class="nav-item flex-fill text-center" role="presentation">
+                  <button class="nav-link w-100" id="register-tab" data-bs-toggle="tab"
+                    data-bs-target="#registerPane" type="button" role="tab">
+                    <i class="ri-user-add-line me-1"></i>Register
+                  </button>
+                </li>
+              </ul>
+
+              <div class="tab-content" id="authTabContent">
+
+                <!-- ======== TAB LOGIN ======== -->
+                <div class="tab-pane fade show active" id="loginPane" role="tabpanel">
+                  <form>
+                    <!-- Grid Row (GSM): Email full width -->
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <label for="loginEmail" class="form-label fw-semibold text-dark">
+                          Your Email <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="loginEmail"
+                          placeholder="Enter Your Email" required />
+                      </div>
+                    </div>
+
+                    <!-- Grid Row (GSM): Password full width -->
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <label for="loginPassword" class="form-label fw-semibold text-dark">
+                          Password <span class="text-danger">*</span>
+                        </label>
+                        <input type="password" class="form-control" id="loginPassword"
+                          placeholder="Password" required />
+                        <div class="form-text text-muted">
+                          We'll never share your password with anyone else.
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Grid Row (GSM): Remember Me + Forgot -->
+                    <div class="row mb-3">
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="rememberMe" />
+                          <label class="form-check-label fw-semibold text-muted" for="rememberMe">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6 text-end">
+                        <a href="#" class="fw-semibold text-warning">Forgot Password?</a>
+                      </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="w-100 btn btn-primary mt-1 ls-1">
+                      Log In
+                    </button>
+
+                    <!-- Not a member yet -->
+                    <div class="text-center mt-3">
+                      <span class="fw-semibold text-muted">Not a member yet?</span>
+                      <a href="#" class="fw-semibold text-warning ms-1"
+                        onclick="document.getElementById('register-tab').click(); return false;">Register</a>
+                    </div>
+                  </form>
+                </div>
+                <!-- ======== END TAB LOGIN ======== -->
+
+                <!-- ======== TAB REGISTER ======== -->
+                <div class="tab-pane fade" id="registerPane" role="tabpanel">
+                  <form>
+                    <!-- Grid Row (GSM): First + Last Name dalam 2 kolom -->
+                    <div class="row">
+                      <div class="col-md-6 col-12 mb-3">
+                        <label for="firstName" class="form-label fw-semibold text-dark">
+                          First Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="firstName"
+                          placeholder="First Name" required />
+                      </div>
+                      <div class="col-md-6 col-12 mb-3">
+                        <label for="lastName" class="form-label fw-semibold text-dark">
+                          Last Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" id="lastName"
+                          placeholder="Last Name" required />
+                      </div>
+                    </div>
+
+                    <!-- Grid Row (GSM): Email full width -->
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <label for="registerEmail" class="form-label fw-semibold text-dark">
+                          Your Email <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="registerEmail"
+                          placeholder="Enter Your Email" required />
+                      </div>
+                    </div>
+
+                    <!-- Grid Row (GSM): Password + Confirm dalam 2 kolom -->
+                    <div class="row">
+                      <div class="col-md-6 col-12 mb-3">
+                        <label for="regPassword" class="form-label fw-semibold text-dark">
+                          Password <span class="text-danger">*</span>
+                        </label>
+                        <input type="password" class="form-control" id="regPassword"
+                          placeholder="Password" required />
+                      </div>
+                      <div class="col-md-6 col-12 mb-3">
+                        <label for="confirmPassword" class="form-label fw-semibold text-dark">
+                          Confirm Password <span class="text-danger">*</span>
+                        </label>
+                        <input type="password" class="form-control" id="confirmPassword"
+                          placeholder="Confirm Password" required />
+                      </div>
+                    </div>
+
+                    <!-- Grid Row (GSM): Terms checkbox -->
+                    <div class="row mb-3">
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="agreeTerms" required />
+                          <label class="form-check-label text-muted fw-semibold" for="agreeTerms">
+                            I agree to the <a href="#" class="text-warning">Terms & Conditions</a>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="w-100 btn btn-primary mt-1 ls-1">
+                      Create Account
+                    </button>
+
+                    <!-- Already have account -->
+                    <div class="text-center mt-3">
+                      <span class="fw-semibold text-muted">Already have an account?</span>
+                      <a href="#" class="fw-semibold text-warning ms-1"
+                        onclick="document.getElementById('login-tab').click(); return false;">Log In</a>
+                    </div>
+                  </form>
+                </div>
+                <!-- ======== END TAB REGISTER ======== -->
+
+              </div><!-- /tab-content -->
+
+
+            </div><!-- /card-body -->
+          </div><!-- /card -->
+
+        </div><!-- /col -->
+      </div><!-- /row -->
+
+    </div><!-- /container -->
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

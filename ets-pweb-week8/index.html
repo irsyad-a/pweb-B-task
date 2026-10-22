@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+
+    <!--========= Required meta tags =========-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description"
+        content="LibraryReg - Aplikasi Pengelolaan Pendaftaran Anggota Perpustakaan Perguruan Tinggi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>LibraryReg - Sistem Pendaftaran & Informasi Perpustakaan Online</title>
+
+    <link rel="shortcut icon" href="assets/img/icon/book.svg" type="image/x-icon" />
+
+    <!-- css include -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/recoleta-font.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Custom Homepage & Registration Stylesheet -->
+    <link rel="stylesheet" href="assets/css/index-custom.css">
+</head>
+
+<body>
+
+    <!-- backtotop - start -->
+    <div class="xb-backtotop">
+        <a href="#" class="scroll">
+            <i class="far fa-arrow-up"></i>
+        </a>
+    </div>
+    <!-- backtotop - end -->
+
+    <!-- Preloader - Start -->
+    <div id="preloader">
+        <div id="loader" class="loader">
+            <div class="loader-container">
+                <div class="loader-icon">
+                    <span
+                        style="font-family: var(--font-heading); font-size: 30px; font-weight: 700; color: var(--color-secondary);">
+                        Library<span style="color: var(--color-primary);">Reg</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader - End -->
+
+    <div class="body_wrap">
+
+        <!-- header start -->
+        <header id="xb-header-area" class="header-area is-sticky">
+            <div class="header-top_wrap">
+                <div class="container">
+                    <div class="header-top ul_li_between">
+                        <div class="xb-help_desk">
+                            <img src="assets/img/icon/hero_top-icon.png" alt="">
+                            <p>Layanan Bantuan & Informasi : <span>+62 (021) 7888-2345</span></p>
+                        </div>
+                        <div class="xb-info">
+                            <ul class="ul_li align-items-end">
+                                <li>Informasi Pemustaka :</li>
+                                <li><a href="login.html">Login Admin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xb-header">
+                <div class="container">
+                    <div class="header__wrap ul_li_between">
+                        <div class="header-logo">
+                            <a href="index.html"
+                                style="font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--color-secondary); text-decoration: none;">
+                                Library<span style="color: var(--color-primary);">Reg</span>
+                            </a>
+                        </div>
+                        <div class="main-menu__wrap ul_li navbar navbar-expand-lg ms-auto">
+                            <nav class="main-menu collapse navbar-collapse">
+                                <ul>
+                                    <li class="active">
+                                        <a href="#beranda">Beranda</a>
+                                    </li>
+                                    <li>
+                                        <a href="#tentang">Tentang</a>
+                                    </li>
+                                    <li>
+                                        <a href="#layanan">Layanan</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="xb-header-wrap">
+                                <div class="xb-header-menu">
+                                    <div class="xb-header-menu-scroll">
+                                        <div class="xb-menu-close xb-hide-xl xb-close"></div>
+                                        <div class="xb-logo-mobile xb-hide-xl">
+                                            <a href="index.html"
+                                                style="font-family: var(--font-heading); font-size: 28px; font-weight: 700; color: var(--color-secondary); text-decoration: none;">
+                                                Library<span style="color: var(--color-primary);">Reg</span>
+                                            </a>
+                                        </div>
+                                        <div class="xb-header-mobile-search xb-hide-xl">
+                                            <form role="search" action="#!">
+                                                <input type="text" placeholder="Cari buku atau informasi..." name="s"
+                                                    class="search-field">
+                                                <button class="search-submit" type="submit"><i
+                                                        class="far fa-search"></i></button>
+                                            </form>
+                                        </div>
+                                        <nav class="xb-header-nav">
+                                            <ul class="xb-menu-primary clearfix">
+                                                <li class="menu-item active">
+                                                    <a href="#beranda">Beranda</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#tentang">Tentang</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#layanan">Layanan</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="#daftar-anggota">Daftar Anggota</a>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <a href="login.html">Login Admin</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="xb-header-menu-backdrop"></div>
+                            </div>
+                        </div>
+                        <div class="header-right ul_li">
+                            <a class="thm-btn" href="#daftar-anggota">
+                                Daftar Anggota
+                                <span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                                            fill="white" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="header-bar-mobile side-menu d-lg-none">
+                            <a class="xb-nav-mobile" href="javascript:void(0);"><i class="fal fa-bars"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- header search start -->
+        <div class="header-search-form-wrapper">
+            <div class="xb-search-close xb-close"></div>
+            <div class="header-search-container">
+                <form role="search" class="search-form" action="#!">
+                    <input type="search" class="search-field" placeholder="Cari koleksi katalog..." value="" name="s">
+                    <button type="submit" class="search-submit"><i class="far fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="body-overlay"></div>
+        <!-- header search end -->
+
+        <!-- main area start  -->
+        <main>
+            <!-- Section: Hero & Overview -->
+            <section id="beranda" class="hero o-hidden pos-rel">
+                <div class="bg_img" data-background="assets/img/beranda/bgHero.png">
+                    <div class="container">
+                        <div class="hero__content-wrap text-center pt-55">
+                            <div class="section-title clr-white mb-45">
+                                <span class="sub-title wow fadeInUp" data-wow-delay="0ms"
+                                    data-wow-duration=".6s">Selamat Datang di Perpustakaan Perguruan Tinggi</span>
+                                <h1 class="title wow fadeInUp" data-wow-delay="150ms" data-wow-duration=".6s">LibraryReg
+                                    Sistem Pendaftaran <br> Anggota Perpustakaan Modern</h1>
+                            </div>
+                            <div class="xb-hero-img mt-40 pt-10">
+                                <img src="assets/img/beranda/imageHero.png" alt="LibraryReg Hero">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- hero btn start -->
+            <div class="hero-btns">
+                <div class="btns ul_li_center">
+                    <a class="thm-btn thm-btn--stroke-white sec-btn" href="#daftar-anggota">Daftar Anggota Online
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22 4.84999V16.74C22 17.71 21.21 18.6 20.24 18.72L19.93 18.76C18.29 18.98 15.98 19.66 14.12 20.44C13.47 20.71 12.75 20.22 12.75 19.51V5.59999C12.75 5.22999 12.96 4.88999 13.29 4.70999C15.12 3.71999 17.89 2.83999 19.77 2.67999H19.83C21.03 2.67999 22 3.64999 22 4.84999Z"
+                                    fill="white" />
+                                <path
+                                    d="M10.71 4.70999C8.87999 3.71999 6.10999 2.83999 4.22999 2.67999H4.15999C2.95999 2.67999 1.98999 3.64999 1.98999 4.84999V16.74C1.98999 17.71 2.77999 18.6 3.74999 18.72L4.05999 18.76C5.69999 18.98 8.00999 19.66 9.86999 20.44C10.52 20.71 11.24 20.22 11.24 19.51V5.59999C11.24 5.21999 11.04 4.88999 10.71 4.70999ZM4.99999 7.73999H7.24999C7.65999 7.73999 7.99999 8.07999 7.99999 8.48999C7.99999 8.90999 7.65999 9.23999 7.24999 9.23999H4.99999C4.58999 9.23999 4.24999 8.90999 4.24999 8.48999C4.24999 8.07999 4.58999 7.73999 4.99999 7.73999ZM7.99999 12.24H4.99999C4.58999 12.24 4.24999 11.91 4.24999 11.49C4.24999 11.08 4.58999 10.74 4.99999 10.74H7.99999C8.40999 10.74 8.74999 11.08 8.74999 11.49C8.74999 11.91 8.40999 12.24 7.99999 12.24Z"
+                                    fill="white" />
+                            </svg></span>
+                    </a>
+                    <a class="thm-btn thm-btn--stroke-white sec-btn" href="#layanan">Layanan Perpustakaan
+                        <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M16.25 19.492V20.75C16.25 21.164 15.914 21.5 15.5 21.5C15.086 21.5 14.75 21.164 14.75 20.75V19.5H16C16.084 19.5 16.167 19.497 16.25 19.492Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.75 19.5H8C5.929 19.5 4.25 17.821 4.25 15.75V12.668L9.964 15.825C11.202 16.509 12.798 16.509 14.036 15.825L14.75 15.431V19.5ZM16.25 14.602L19.75 12.668V15.75C19.75 17.737 18.205 19.363 16.25 19.492V14.602Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.75 14.288L13.552 14.95C12.608 15.472 11.392 15.472 10.448 14.95L2.134 10.356C1.568 10.043 1.25 9.49499 1.25 8.92199C1.25 8.34799 1.568 7.79999 2.134 7.48799L10.448 2.89299C11.392 2.37199 12.608 2.37199 13.552 2.89299L21.866 7.48799C22.432 7.79999 22.75 8.34799 22.75 8.92199C22.75 9.49499 22.432 10.043 21.866 10.356L16.25 13.459V12.75C16.25 12.551 16.171 12.36 16.03 12.22L12.53 8.71999C12.238 8.42699 11.762 8.42699 11.47 8.71999C11.177 9.01199 11.177 9.48799 11.47 9.77999L14.75 13.061V14.288Z"
+                                    fill="white" />
+                            </svg></span>
+                    </a>
+                    <a class="thm-btn thm-btn--stroke-white sec-btn" href="#tentang">Tentang Perpustakaan
+                        <span><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M13.0364 2.63798C11.6702 1.79536 10.0512 1.33203 8.37891 1.33203C3.82654 1.33203 0 4.72368 0 9.06641C0 10.589 0.473 12.0486 1.37148 13.3092L0.116359 17.2497C-0.0162422 17.6659 0.295539 18.0898 0.730598 18.0898C0.83007 18.0898 0.930188 18.0669 1.02257 18.0198L4.83957 16.0791C4.99413 16.1456 5.15062 16.2076 5.3087 16.265C4.42496 14.8857 3.95312 13.3023 3.95312 11.6445C3.95312 6.70755 8.10726 2.91208 13.0364 2.63798Z"
+                                    fill="white" />
+                                <path
+                                    d="M20.6285 15.8873C21.527 14.6267 22 13.1671 22 11.6445C22 7.30022 18.1718 3.91016 13.6211 3.91016C9.06873 3.91016 5.24219 7.30181 5.24219 11.6445C5.24219 15.9888 9.07036 19.3789 13.6211 19.3789C14.8421 19.3789 16.0588 19.1301 17.1602 18.6571L20.9774 20.598C21.2091 20.7158 21.4889 20.6829 21.6869 20.5146C21.885 20.3463 21.9626 20.0755 21.8837 19.8278L20.6285 15.8873ZM11 12.2891C10.644 12.2891 10.3555 12.0005 10.3555 11.6445C10.3555 11.2886 10.644 11 11 11C11.356 11 11.6445 11.2886 11.6445 11.6445C11.6445 12.0005 11.356 12.2891 11 12.2891ZM13.5781 12.2891C13.2222 12.2891 12.9336 12.0005 12.9336 11.6445C12.9336 11.2886 13.2222 11 13.5781 11C13.9341 11 14.2227 11.2886 14.2227 11.6445C14.2227 12.0005 13.9341 12.2891 13.5781 12.2891ZM16.1562 12.2891C15.8003 12.2891 15.5117 12.0005 15.5117 11.6445C15.5117 11.2886 15.8003 11 16.1562 11C16.5122 11 16.8008 11.2886 16.8008 11.6445C16.8008 12.0005 16.5122 12.2891 16.1562 12.2891Z"
+                                    fill="white" />
+                            </svg></span>
+                    </a>
+                </div>
+            </div>
+            <!-- hero btn end -->
+
+            <!-- Services Overview Start -->
+            <section class="department pt-115 pb-200 pos-rel">
+                <div class="container">
+                    <div class="section-title text-center mb-25">
+                        <span class="sub-title">Layanan & Fasilitas Terpadu</span>
+                        <h1 class="title">Overview Layanan Perpustakaan</h1>
+                    </div>
+                    <div class="dep-inner pb-200 pos-rel">
+                        <div class="row g-0">
+                            <div class="col-lg-3 col-md-6 mt-30 mb-30 dp-col">
+                                <div class="xb-dep-wrapper">
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Daftar Anggota Online</h3>
+                                        <span>Layanan Unggulan</span>
+                                        <a class="div-link" href="#daftar-anggota"></a>
+                                    </div>
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5S2.45 4.9 1 6v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm-1 13c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Peminjaman Buku</h3>
+                                        <span>Koleksi: 75.000+</span>
+                                        <a class="div-link" href="#layanan"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mt-30 mb-30 dp-col">
+                                <div class="xb-dep-wrapper">
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Peminjaman Ruang</h3>
+                                        <span>Ruang Diskusi & Kubikus</span>
+                                        <a class="div-link" href="#layanan"></a>
+                                    </div>
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">E-Journal & Riset</h3>
+                                        <span>Database: 25+ Vendor</span>
+                                        <a class="div-link" href="#layanan"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mt-30 mb-30 dp-col">
+                                <div class="xb-dep-wrapper">
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Katalog Mandiri (OPAC)</h3>
+                                        <span>Akses 24 Jam</span>
+                                        <a class="div-link" href="#layanan"></a>
+                                    </div>
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.53-.94C9.36 20.64 10.64 21 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm1 14h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Bimbingan Pemustaka</h3>
+                                        <span>Konsultasi Sitasi</span>
+                                        <a class="div-link" href="#layanan"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mt-30 mb-30 dp-col">
+                                <div class="xb-dep-wrapper">
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Bebas Pustaka</h3>
+                                        <span>Layanan Wisuda</span>
+                                        <a class="div-link" href="#layanan"></a>
+                                    </div>
+                                    <div class="xb-department text-center pos-rel">
+                                        <div class="xb-item--icon">
+                                            <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                                                <path
+                                                    d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="xb-item--title">Portal Admin</h3>
+                                        <span>Kelola Data Anggota</span>
+                                        <a class="div-link" href="login.html"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xb-feature-shape">
+                        <span class="shape shape--one"><img data-parallax='{"x":-50,"y":-80}'
+                                src="assets/img/shape/stamp.png" alt=""></span>
+                        <span class="shape shape--two"><img data-parallax='{"x":50,"y":80}'
+                                src="assets/img/shape/cap.png" alt=""></span>
+                    </div>
+                </div>
+            </section>
+            <!-- Services Overview End -->
+
+            <!-- Statistics & Facts Start -->
+            <section class="fanfact pos-rel">
+                <div class="container">
+                    <div class="fanfact-wrapper">
+                        <div class="fanfact-slider swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="xb-fanfact__wrapper pos-rel">
+                                        <div class="xb-item--img">
+                                            <img src="assets/img/beranda/MacBook Pro 14_ - 3.png" alt="">
+                                        </div>
+                                        <h2 class="xb-item--title">Layanan Pendaftaran Cepat & <br> Terintegrasi
+                                            Otomatis</h2>
+                                        <div class="xb-item--holder">
+                                            <h3 class="xb-item--number">75.000+</h3>
+                                            <h2 class="xb-item--text">Koleksi Buku & Literatur</h2>
+                                            <p class="xb-item--content">Perpustakaan perguruan tinggi menyediakan
+                                                beragam koleksi buku cetak, e-book, dan literatur ilmiah mutakhir.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="xb-fanfact__wrapper pos-rel">
+                                        <div class="xb-item--img">
+                                            <img src="assets/img/beranda/MacBook Pro 14_ - 3.png" alt="">
+                                        </div>
+                                        <h2 class="xb-item--title">Kemudahan Akses Koleksi & <br> Fasilitas Ruang
+                                            Belajar</h2>
+                                        <div class="xb-item--holder">
+                                            <h3 class="xb-item--number">14.500+</h3>
+                                            <h2 class="xb-item--text">Anggota Perpustakaan Aktif</h2>
+                                            <p class="xb-item--content">Ribuan mahasiswa, dosen, dan peneliti aktif
+                                                memanfaatkan fasilitas ruang baca dan sirkulasi peminjaman kami.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="xb-fanfact__wrapper pos-rel">
+                                        <div class="xb-item--img">
+                                            <img src="assets/img/beranda/MacBook Pro 14_ - 3.png" alt="">
+                                        </div>
+                                        <h2 class="xb-item--title">Kunjungan & Peminjaman <br> Tanpa Hambatan Antrean
+                                        </h2>
+                                        <div class="xb-item--holder">
+                                            <h3 class="xb-item--number">52.000+</h3>
+                                            <h2 class="xb-item--text">Sirkulasi Peminjaman Buku</h2>
+                                            <p class="xb-item--content">Sirkulasi transaksi buku dan peminjaman ruang
+                                                berjalan efisien dengan dukungan sistem informasi modern.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination ul_li_center"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Statistics & Facts End -->
+
+
+            <!-- Section: About the Library -->
+            <section id="tentang" class="about pt-120 pb-120">
+                <div class="container">
+                    <div class="section-title text-center mb-65">
+                        <span class="sub-title">Profil & Informasi</span>
+                        <h1 class="title">Tentang Perpustakaan Kami</h1>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="about-content text-center mt-30">
+                                Sebagai jantung akademik perguruan tinggi, Perpustakaan berkomitmen menghadirkan layanan
+                                informasi, literasi ilmiah, dan tempat belajar yang kondusif. Melalui inisiatif
+                                <strong>LibraryReg</strong>, proses pendaftaran anggota perpustakaan yang dulunya
+                                memakan waktu dengan formulir kertas kini bertransformasi menjadi pendaftaran daring
+                                instan. Mahasiswa dan sivitas akademika dapat mendaftar kapan saja, sementara petugas
+                                perpustakaan dapat mengelola data anggota, mencari informasi peminjam, serta mencetak
+                                kartu anggota dengan cepat dan akurat.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="xb-video pos-rel mt-80">
+                        <img src="assets/img/beranda/theCard1.png" alt="Video Perpustakaan">
+                        <a class="btn-video btn-video-center popup-video"
+                            href="https://www.youtube.com/watch?v=cRXm1p-CNyk"><i class="fas fa-play"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- mission vision start -->
+            <section class="mission-vission z-1 pos-rel pt-110 pb-120">
+                <div class="mission-vission-bg" data-background="assets/img/bg/vm_bg.jpg"></div>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center mb-65">
+                                <h2 class="title mb-15">Visi dan Misi Perpustakaan</h2>
+                                <p>Perpustakaan bertekad menjadi pusat unggulan sumber belajar dan inovasi berbasis
+                                    teknologi informasi guna menunjang Tri Dharma Perguruan Tinggi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-none-30">
+                        <div class="col-lg-6 mt-30">
+                            <div class="mission-vission-item">
+                                <h3 class="xb-item--title">Misi Perpustakaan</h3>
+                                <p class="xb-item--content">Menyelenggarakan layanan kepustakaan prima dan menyediakan
+                                    akses sumber informasi ilmiah berkualitas tinggi bagi sivitas akademika.</p>
+                                <h4 class="xb-item--subtitle">Komitmen Layanan Kami:</h4>
+                                <ul class="xb-item--list list-unstyled">
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Menyediakan koleksi
+                                        literatur akademik mutakhir dan terpercaya.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Mengembangkan sistem
+                                        otomasi perpustakaan mandiri dan cepat.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Mendukung kegiatan
+                                        riset dan publikasi jurnal internasional.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Menyediakan ruang
+                                        belajar dan kolaborasi yang ramah pemustaka.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Memberikan pendampingan
+                                        literasi informasi dan sitasi karya ilmiah.</li>
+                                </ul>
+                                <div class="xb-item--shape">
+                                    <div class="shape shape--1">
+                                        <img src="assets/img/shape/vm_shape1.png" alt="">
+                                    </div>
+                                    <div class="shape shape--2">
+                                        <img src="assets/img/shape/vm_shape2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mt-30">
+                            <div class="mission-vission-item">
+                                <h3 class="xb-item--title">Visi Perpustakaan</h3>
+                                <p class="xb-item--content">Menjadi perpustakaan riset berstandar internasional yang
+                                    inovatif, inklusif, dan unggul dalam mendukung kemajuan ilmu pengetahuan.</p>
+                                <h4 class="xb-item--subtitle">Keunggulan Perpustakaan:</h4>
+                                <ul class="xb-item--list list-unstyled">
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Layanan pendaftaran
+                                        anggota daring bebas antrean dengan LibraryReg.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Integrasi repositori
+                                        digital karya akhir dan skripsi mahasiswa.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Fasilitas self-service
+                                        peminjaman dan pengembalian buku 24/7.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Akses jurnal bereputasi
+                                        global Scopus, IEEE, dan ScienceDirect.</li>
+                                    <li><span><img src="assets/img/icon/check.svg" alt=""></span>Petugas pustakawan
+                                        profesional yang siap melayani setiap saat.</li>
+                                </ul>
+                                <div class="xb-item--shape">
+                                    <div class="shape shape--1">
+                                        <img src="assets/img/shape/vm_shape1.png" alt="">
+                                    </div>
+                                    <div class="shape shape--2">
+                                        <img src="assets/img/shape/vm_shape2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- mission vision end -->
+
+
+            <!-- Section: Library Services -->
+            <section id="layanan" class="program pos-rel pt-115 pb-120">
+                <div class="container">
+                    <div class="pro-top ul_li_between mb-40">
+                        <div class="section-title mb-20">
+                            <span class="sub-title">Fasilitas & Sirkulasi</span>
+                            <h1 class="title">Rincian Layanan Perpustakaan</h1>
+                        </div>
+                        <div class="pro-btn mb-20">
+                            <a class="thm-btn thm-btn--stroke-black" href="#daftar-anggota">Daftar Anggota Sekarang
+                                <span><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M22 4.84993V16.7399C22 17.7099 21.21 18.5999 20.24 18.7199L19.93 18.7599C18.29 18.9799 15.98 19.6599 14.12 20.4399C13.47 20.7099 12.75 20.2199 12.75 19.5099V5.59993C12.75 5.22993 12.96 4.88993 13.29 4.70993C15.12 3.71993 17.89 2.83993 19.77 2.67993H19.83C21.03 2.67993 22 3.64993 22 4.84993Z"
+                                            fill="#170006" />
+                                        <path
+                                            d="M10.71 4.70993C8.87999 3.71993 6.10999 2.83993 4.22999 2.67993H4.15999C2.95999 2.67993 1.98999 3.64993 1.98999 4.84993V16.7399C1.98999 17.7099 2.77999 18.5999 3.74999 18.7199L4.05999 18.7599C5.69999 18.9799 8.00999 19.6599 9.86999 20.4399C10.52 20.7099 11.24 20.2199 11.24 19.5099V5.59993C11.24 5.21993 11.04 4.88993 10.71 4.70993ZM4.99999 7.73993H7.24999C7.65999 7.73993 7.99999 8.07993 7.99999 8.48993C7.99999 8.90993 7.65999 9.23993 7.24999 9.23993H4.99999C4.58999 9.23993 4.24999 8.90993 4.24999 8.48993C4.24999 8.07993 4.58999 7.73993 4.99999 7.73993ZM7.99999 12.2399H4.99999C4.58999 12.2399 4.24999 11.9099 4.24999 11.4899C4.24999 11.0799 4.58999 10.7399 4.99999 10.7399H7.99999C8.40999 10.7399 8.74999 11.0799 8.74999 11.4899C8.74999 11.9099 8.40999 12.2399 7.99999 12.2399Z"
+                                            fill="#170006" />
+                                    </svg></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row mt-none-60">
+                        <!-- Service: Member Registration -->
+                        <div class="col-lg-4 col-md-6 mt-60">
+                            <div class="xb-program__wrapper">
+                                <div class="xb-item--img text-center">
+                                    <a href="#daftar-anggota"><img src="assets/img/beranda/LayananCard.png" alt=""></a>
+                                </div>
+                                <div class="xb-item--holder">
+                                    <h2 class="xb-item--title border-effect-2"><a href="#daftar-anggota">Pendaftaran
+                                            Anggota Online</a></h2>
+                                    <p>Daftarkan diri Anda secara mandiri melalui web LibraryReg tanpa antrean kertas
+                                        dan formulir manual.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service: Book Borrowing -->
+                        <div class="col-lg-4 col-md-6 mt-60">
+                            <div class="xb-program__wrapper">
+                                <div class="xb-item--img text-center">
+                                    <a href="#daftar-anggota"><img src="assets/img/beranda/LayananCard-1.png"
+                                            alt=""></a>
+                                </div>
+                                <div class="xb-item--holder">
+                                    <h2 class="xb-item--title border-effect-2"><a href="#daftar-anggota">Peminjaman &
+                                            Sirkulasi Buku</a></h2>
+                                    <p>Layanan peminjaman hingga 5 buku selama 14 hari, fasilitas perpanjangan online
+                                        dan pengembalian mandiri.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service: Room Booking -->
+                        <div class="col-lg-4 col-md-6 mt-60">
+                            <div class="xb-program__wrapper">
+                                <div class="xb-item--img text-center">
+                                    <a href="#daftar-anggota"><img src="assets/img/beranda/LayananCard-2.png"
+                                            alt=""></a>
+                                </div>
+                                <div class="xb-item--holder">
+                                    <h2 class="xb-item--title border-effect-2"><a href="#daftar-anggota">Peminjaman
+                                            Ruang Belajar</a></h2>
+                                    <p>Reservasi ruang kubikus mandiri untuk skripsi atau ruang diskusi kelompok
+                                        berteknologi smart screen.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service: E-Journals & Digital Resources -->
+                        <div class="col-lg-4 col-md-6 mt-60">
+                            <div class="xb-program__wrapper">
+                                <div class="xb-item--img text-center">
+                                    <a href="#daftar-anggota"><img src="assets/img/beranda/LayananCard-3.png"
+                                            alt=""></a>
+                                </div>
+                                <div class="xb-item--holder">
+                                    <h2 class="xb-item--title border-effect-2"><a href="#daftar-anggota">Akses E-Journal
+                                            Internasional</a></h2>
+                                    <p>Akses gratis basis data jurnal bereputasi global Scopus, ScienceDirect, IEEE, dan
+                                        repositori kampus.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service: Literacy & Citation Guidance -->
+                        <div class="col-lg-4 col-md-6 mt-60">
+                            <div class="xb-program__wrapper">
+                                <div class="xb-item--img text-center">
+                                    <a href="#daftar-anggota"><img src="assets/img/beranda/LayananCard-4.png"
+                                            alt=""></a>
+                                </div>
+                                <div class="xb-item--holder">
+                                    <h2 class="xb-item--title border-effect-2"><a href="#daftar-anggota">Bimbingan
+                                            Sitasi & Plagiarisme</a></h2>
+                                    <p>Pendampingan pencarian literatur referensi skripsi, manajemen sitasi Mendeley,
+                                        dan cek orisinalitas Turnitin.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service: Membership Administration -->
+                        <div class="col-lg-4 col-md-6 mt-60">
+                            <div class="xb-program__wrapper">
+                                <div class="xb-item--img text-center">
+                                    <a href="login.html"><img src="assets/img/beranda/LayananCard-5.png" alt=""></a>
+                                </div>
+                                <div class="xb-item--holder">
+                                    <h2 class="xb-item--title border-effect-2"><a href="login.html">Pengelolaan Data
+                                            Anggota</a></h2>
+                                    <p>Khusus petugas perpustakaan: verifikasi pendaftaran baru, pencarian anggota, edit
+                                        data, dan cetak kartu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xb-cta bg_img mt-120 pos-rel" data-background="assets/img/beranda/CTA.png">
+                        <h2 class="mb-15">Sudahkah Anda Terdaftar Sebagai Anggota Perpustakaan?</h2>
+                        <div class="xb-btn xb-cta-btn ul_li">
+                            <a class="thm-btn btn-yellow mt-20" href="#daftar-anggota">Daftar Sekarang
+                                <span><img src="assets/img/icon/learning.png" alt=""></span>
+                            </a>
+                            <span class="mt-20"><img src="assets/img/icon/calling-icon.png" alt=""> +62 (021)
+                                7888-2345</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="program-shape">
+                    <div class="shape shape--one">
+                        <img data-parallax='{"x":-50,"y":-80}' src="assets/img/shape/book.png" alt="">
+                    </div>
+                    <div class="shape shape--two">
+                        <img data-parallax='{"x":-50,"y":-80}' src="assets/img/shape/camical.png" alt="">
+                    </div>
+                    <div class="shape shape--three">
+                        <img data-parallax='{"x":50,"y":80}' src="assets/img/shape/pen.png" alt="">
+                    </div>
+                    <div class="shape shape--four">
+                        <img data-parallax='{"x":50,"y":80}' src="assets/img/shape/stamp01.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <!-- Library Services End -->
+
+
+            <!-- Section: Public Member Registration Form -->
+            <section id="daftar-anggota" class="contact_section section_space" data-bg-color="#F1F1E9">
+                <div class="container">
+                    <div class="section-title text-center mb-50">
+                        <span class="sub-title">Registrasi Mandiri Online</span>
+                        <h1 class="title">Formulir Pendaftaran Anggota Perpustakaan</h1>
+                        <p>Isi data diri Anda di bawah ini untuk menjadi anggota resmi perpustakaan. Data akan otomatis
+                            tersimpan dalam sistem LibraryReg.</p>
+                    </div>
+
+                    <!-- Registration Success Alert -->
+                    <div id="regSuccessAlert" class="alert alert-success d-none mb-4" role="alert">
+                        <h4 class="alert-heading"><i class="fas fa-check-circle me-2"></i> Pendaftaran Berhasil!</h4>
+                        <p>Selamat, data pendaftaran Anda telah berhasil disimpan ke sistem LibraryReg. Silakan kunjungi
+                            meja layanan sirkulasi atau hubungi petugas admin untuk verifikasi dan pencetakan kartu
+                            anggota.</p>
+                        <hr>
+                        <p class="mb-0" id="regSuccessInfo"></p>
+                    </div>
+
+                    <div class="row justify-content-lg-between align-items-stretch mt-none-30">
+                        <div class="col-lg-7 mt-30 d-flex flex-column">
+                            <div class="contact_form h-100 mb-0 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="title">Formulir Biodata Pemustaka</h3>
+                                    <p class="content">
+                                        Pastikan nomor identitas (NIM/NIP) dan email aktif dimasukkan dengan benar.
+                                    </p>
+                                    <form id="memberRegisterForm" action="#!">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_nim">Nomor Induk (NIM / NIP /
+                                                        NIK) *</label>
+                                                    <input id="member_nim" class="form-control" type="text" name="nim"
+                                                        placeholder="Contoh: 2108102010" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_name">Nama Lengkap *</label>
+                                                    <input id="member_name" class="form-control" type="text" name="name"
+                                                        placeholder="Nama lengkap sesuai KTM/KTP" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_email">Alamat Email Kampus /
+                                                        Pribadi *</label>
+                                                    <input id="member_email" class="form-control" type="email"
+                                                        name="email" placeholder="mahasiswa@kampus.ac.id" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_phone">Nomor Telepon /
+                                                        WhatsApp *</label>
+                                                    <input id="member_phone" class="form-control" type="tel"
+                                                        name="phone" placeholder="0812-3456-7890" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_type">Kategori Keanggotaan
+                                                        *</label>
+                                                    <select id="member_type" class="form-control form-select"
+                                                        name="type" required>
+                                                        <option value="Mahasiswa S1">Mahasiswa S1</option>
+                                                        <option value="Mahasiswa S2 / S3">Mahasiswa S2 / S3</option>
+                                                        <option value="Dosen & Peneliti">Dosen & Peneliti</option>
+                                                        <option value="Tenaga Kependidikan">Tenaga Kependidikan</option>
+                                                        <option value="Anggota Eksternal">Anggota Eksternal</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_faculty">Jenjang / Fakultas /
+                                                        Program Studi *</label>
+                                                    <input id="member_faculty" class="form-control" type="text"
+                                                        name="faculty" placeholder="Contoh: S1 - Sistem Informasi"
+                                                        required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label class="input_title" for="member_address">Alamat Domisili
+                                                        *</label>
+                                                    <textarea id="member_address" class="form-control" name="address"
+                                                        placeholder="Alamat tempat tinggal / kost saat ini"
+                                                        required></textarea>
+                                                </div>
+                                                <button type="submit" class="thm-btn">Daftar Anggota Sekarang
+                                                    <span><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M13.0364 2.63798C11.6702 1.79536 10.0512 1.33203 8.37891 1.33203C3.82654 1.33203 0 4.72368 0 9.06641C0 10.589 0.473 12.0486 1.37148 13.3092L0.116359 17.2497C-0.0162422 17.6659 0.295539 18.0898 0.730598 18.0898C0.83007 18.0898 0.930188 18.0669 1.02257 18.0198L4.83957 16.0791C4.99413 16.1456 5.15062 16.2076 5.3087 16.265C4.42496 14.8857 3.95312 13.3023 3.95312 11.6445C3.95312 6.70755 8.10726 2.91208 13.0364 2.63798Z"
+                                                                fill="#170006"></path>
+                                                            <path
+                                                                d="M20.6285 15.8873C21.527 14.6267 22 13.1671 22 11.6445C22 7.30022 18.1718 3.91016 13.6211 3.91016C9.06873 3.91016 5.24219 7.30181 5.24219 11.6445C5.24219 15.9888 9.07036 19.3789 13.6211 19.3789C14.8421 19.3789 16.0588 19.1301 17.1602 18.6571L20.9774 20.598C21.2091 20.7157 21.4889 20.6829 21.6869 20.5146C21.885 20.3463 21.9626 20.0755 21.8837 19.8278L20.6285 15.8873ZM11 12.2891C10.644 12.2891 10.3555 12.0005 10.3555 11.6445C10.3555 11.2886 10.644 11 11 11C11.356 11 11.6445 11.2886 11.6445 11.6445C11.6445 12.0005 11.356 12.2891 11 12.2891ZM13.5781 12.2891C13.2222 12.2891 12.9336 12.0005 12.9336 11.6445C12.9336 11.2886 13.2222 11 13.5781 11C13.9341 11 14.2227 11.2886 14.2227 11.6445C14.2227 12.0005 13.9341 12.2891 13.5781 12.2891ZM16.1562 12.2891C15.8003 12.2891 15.5117 12.0005 15.5117 11.6445C15.5117 11.2886 15.8003 11 16.1562 11C16.5122 11 16.8008 11.2886 16.8008 11.6445C16.8008 12.0005 16.5122 12.2891 16.1562 12.2891Z"
+                                                                fill="#170006"></path>
+                                                        </svg></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 mt-30 d-flex flex-column">
+                            <div class="education-info-card h-100 mb-0 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h3 class="title mb-10" style="font-size: 26px; text-transform: capitalize;">
+                                        Keanggotaan & Fasilitas Pendidikan</h3>
+                                    <p class="content text-muted mb-35" style="font-size: 15px; line-height: 24px;">
+                                        Hak akses literasi, fasilitas riset, dan ketentuan pemustaka sivitas perguruan
+                                        tinggi yang terdaftar:
+                                    </p>
+                                    <div class="mb-30">
+                                        <ul class="xb-item--list list-unstyled">
+                                            <li><span><img src="assets/img/icon/check.svg"
+                                                        alt=""></span><strong>Peminjaman Koleksi Ilmiah:</strong> Pinjam
+                                                hingga 5 buku selama 14 hari dengan fasilitas perpanjangan online.</li>
+                                            <li><span><img src="assets/img/icon/check.svg" alt=""></span><strong>Akses
+                                                    E-Journal Internasional:</strong> Basis data ilmiah global Scopus,
+                                                IEEE, dan ScienceDirect 24 jam.</li>
+                                            <li><span><img src="assets/img/icon/check.svg" alt=""></span><strong>Ruang
+                                                    Belajar & Diskusi:</strong> Reservasi ruang kubikus mandiri dan
+                                                ruang multimedia kolaboratif.</li>
+                                            <li><span><img src="assets/img/icon/check.svg" alt=""></span><strong>Bebas
+                                                    Pustaka Online:</strong> Surat bebas tanggungan pustaka instan untuk
+                                                yudisium & wisuda kelulusan.</li>
+                                            <li><span><img src="assets/img/icon/check.svg"
+                                                        alt=""></span><strong>Bimbingan Literasi Informasi:</strong>
+                                                Konsultasi referensi ilmiah, sitasi Mendeley, dan uji cek Turnitin.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="contact_iconbox p-4"
+                                    style="background-color: #F1F1E9; border-radius: 12px; margin-top: auto;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="iconbox_icon me-3 mb-0" style="margin-bottom: 0;">
+                                            <img src="assets/img/icon/call-calling.svg" alt="Calling"
+                                                style="width: 36px; height: 36px;">
+                                        </div>
+                                        <div class="iconbox_content">
+                                            <h4 class="iconbox_title mb-1"
+                                                style="font-size: 16px; font-weight: 700; color: #170006;">Bantuan
+                                                Layanan Pemustaka</h4>
+                                            <p class="mb-1 text-muted" style="font-size: 13px;">Senin - Jumat 08.00 -
+                                                20.00 WIB</p>
+                                            <h3 class="mb-0"
+                                                style="font-size: 18px; font-weight: 700; color: var(--color-primary);">
+                                                <a href="tel:+6202178882345"
+                                                    style="color: inherit; text-decoration: none;">+62 (021)
+                                                    7888-2345</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+            <!-- Member Registration End -->
+
+        </main>
+        <!-- main area end  -->
+
+        <!-- footer start -->
+        <footer class="footer bg_img pos-rel pt-20" data-background="assets/img/bg/footer-bg.jpg">
+            <div class="xb-footer-wrap">
+                <div class="container">
+                    <div class="footer-cta ul_li_between mb-35">
+                        <div class="xb-item--holder ul_li mt-30">
+                            <div class="xb-item--icon-avatar ul_li">
+                                <span><img src="assets/img/icon/calling-icon01.png" alt=""></span>
+                                <div class="xb-item--avatar">
+                                    <img src="assets/img/beranda/CPProf.png" alt="Pustakawan">
+                                </div>
+                            </div>
+                            <div class="xb-item--content">
+                                Memiliki pertanyaan seputar keanggotaan dan layanan? <br> Konsultasikan langsung dengan
+                                pustakawan kami.
+                            </div>
+                        </div>
+                        <div class="xb-item--contact mt-30">
+                            <span>Layanan Hotline & Bantuan</span>
+                            <h3>+62 (021) 7888-2345</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="xb-footer-main pt-70 pb-60">
+                    <div class="container">
+                        <div class="row justify-content-between mt-none-30">
+                            <!-- Footer Column: Profile & Address -->
+                            <div class="col-lg-4 col-md-6 mt-30">
+                                <div class="footer-widget">
+                                    <div class="xb-item--logo mb-25">
+                                        <a href="index.html"
+                                            style="font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: #ffffff; text-decoration: none;">
+                                            Library<span style="color: var(--color-primary);">Reg</span>
+                                        </a>
+                                    </div>
+                                    <p class="xb-item--details text-white-50 mb-20" style="line-height: 26px; font-size: 15px;">
+                                        Gedung Perpustakaan Pusat Lantai 1-3,<br>
+                                        Kampus Terpadu Perguruan Tinggi,<br>
+                                        Indonesia
+                                    </p>
+                                    <div class="xb-item--meta mt-25">
+                                        <span class="d-block mb-10 text-white font-weight-bold" style="font-size: 15px;">Media Sosial Perpustakaan</span>
+                                        <ul class="xb-item--social_link ul_li">
+                                            <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#!"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.52217 6.77491L15.4785 0H14.0671L8.89516 5.88256L4.76437 0H0L6.24656 8.89547L0 16H1.41155L6.87321 9.78782L11.2356 16H16L9.52183 6.77491H9.52217ZM7.58887 8.97384L6.95596 8.08805L1.92015 1.03974H4.0882L8.15216 6.72795L8.78507 7.61374L14.0677 15.0075H11.8997L7.58887 8.97418V8.97384Z"
+                                                            fill="white" />
+                                                    </svg></a></li>
+                                            <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer Column: Operating Hours -->
+                            <div class="col-lg-4 col-md-6 mt-30">
+                                <div class="footer-widget ps-lg-4">
+                                    <h3 class="xb-item--title mb-25" style="color: #ffffff; font-size: 22px; font-weight: 700;">Jam Operasional Layanan</h3>
+                                    <ul class="xb-item--links list-unstyled text-white-50" style="line-height: 28px; font-size: 15px;">
+                                        <li class="mb-2"><strong class="text-white">Senin - Jumat :</strong> 08.00 - 20.00 WIB</li>
+                                        <li class="mb-2"><strong class="text-white">Sabtu :</strong> 08.00 - 15.00 WIB</li>
+                                        <li class="mb-2"><strong class="text-white">Minggu & Libur Nasional :</strong> Tutup</li>
+                                        <li class="mt-3 text-warning font-weight-bold" style="font-size: 14px;">
+                                            *Pendaftaran daring LibraryReg aktif 24 jam setiap hari
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Footer Column: Navigation Links -->
+                            <div class="col-lg-3 col-md-6 mt-30">
+                                <div class="footer-widget ps-lg-3">
+                                    <h3 class="xb-item--title mb-25" style="color: #ffffff; font-size: 22px; font-weight: 700;">Navigasi Halaman</h3>
+                                    <ul class="xb-item--links list-unstyled" style="line-height: 32px; font-size: 15px;">
+                                        <li><a href="#beranda">Beranda</a></li>
+                                        <li><a href="#tentang">Tentang</a></li>
+                                        <li><a href="#layanan">Layanan</a></li>
+                                        <li><a href="#daftar-anggota">Daftar Anggota</a></li>
+                                        <li><a href="login.html">Login Admin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom pb-25 pt-25">
+                    <div class="copyright text-center">
+                        <p>Copyright © 2026 <a href="index.html">LibraryReg</a>. Hak Cipta Dilindungi Undang-Undang.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+    </div>
+
+    <!-- JS include -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Public Registration Script -->
+    <script src="assets/js/register.js"></script>
+
+</body>
+
+</html>

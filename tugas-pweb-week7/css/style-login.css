@@ -1,0 +1,79 @@
+/* ============================================================
+   style-login.css
+   Style untuk Halaman Login & Register (Tugas PWEB Week 7)
+   Menggunakan Color Palette & Style dari Tema Techbar
+   ============================================================ */
+
+/* ===== Layout & Background ===== */
+.login-page {
+  background-image: url('../images/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.bg-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(29, 38, 54, 0.82);
+}
+
+/* ===== Card & Form Elements ===== */
+.login-page .card {
+  box-shadow: rgba(27, 36, 92, 0.199) 0px 4px 21px, rgb(48, 44, 44) 0px 4px 21px;
+  border: none;
+  border-radius: 12px;
+}
+
+.login-page .card .form-control:focus {
+  box-shadow: none;
+  border-color: #959797;
+}
+
+.login-page .card .form-check-input:focus {
+  box-shadow: none;
+  border-color: #959797;
+}
+
+.login-page .card a {
+  color: #1f3469;
+}
+
+.login-page .card a:hover {
+  color: #e4ab00 !important;
+}
+
+.login-page .card p {
+  font-size: 16px !important;
+}
+
+.login-page input::placeholder {
+  font-size: 13px !important;
+}
+
+/* ===== Tab Nav Styling (Login / Register Toggle) ===== */
+.nav-tabs .nav-link {
+  color: #959797;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #1f3469;
+}
+
+.nav-tabs .nav-link.active {
+  color: #1f3469 !important;
+  border-bottom: 2px solid #e4ab00;
+  background: transparent;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid rgba(189, 189, 189, 0.3);
+}

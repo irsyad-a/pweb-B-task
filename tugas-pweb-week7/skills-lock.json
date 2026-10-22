@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "readme-generator": {
+      "source": "patricio0312rev/skills",
+      "sourceType": "github",
+      "skillPath": "foundation/readme-generator/SKILL.md",
+      "computedHash": "0740f57c47da13cb1cf6d0648a1cf42a45b7e21366c05b30b4bf11c1332b4226"
+    }
+  }
+}
