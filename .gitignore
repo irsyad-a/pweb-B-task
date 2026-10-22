@@ -1,0 +1,6 @@
+# Vercel
+.vercel/
+vercel.json
+
+# Environment variables
+.env*

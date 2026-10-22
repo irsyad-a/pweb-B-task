@@ -14,7 +14,6 @@
   <img src="https://img.shields.io/badge/Platform-Web%20Browser-blue?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/Bootstrap-5.3-7952b3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
   <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel" alt="Vercel" />
 </p>
 
 ---
@@ -66,7 +65,6 @@ webFinal/
 ├── index.html                # Halaman beranda & formulir pendaftaran anggota
 ├── login.html                # Halaman autentikasi login petugas perpustakaan
 ├── admin.html                # Panel manajemen data anggota & perancang kartu CR80
-├── vercel.json               # Konfigurasi deployment routing Vercel
 │
 └── assets/                   # Aset statis aplikasi
     ├── css/
