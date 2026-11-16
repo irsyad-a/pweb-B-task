@@ -18,7 +18,7 @@
 
 ---
 
-## 📌 Gambaran Umum
+##  Gambaran Umum
 
 **LibraryReg** adalah aplikasi web modern yang dirancang untuk kebutuhan sirkulasi pendaftaran dan administrasi pemustaka di lingkungan perguruan tinggi. Sistem ini menyediakan antarmuka publik yang ramah pengguna untuk registrasi mandiri mahasiswa, dosen, dan staf, serta panel kendali komprehensif bagi petugas perpustakaan untuk mengelola data anggota, memantau statistik, dan menerbitkan kartu fisik pemustaka secara instan.
 
@@ -50,15 +50,15 @@
   * **Sisi Depan (*Front*):** Logo perpustakaan, pas foto/avatar inisial dinamis, data identitas, chip mikrokontroler grafis, hologram sekuritas, dan status masa berlaku.
   * **Sisi Belakang (*Back*):** Panel tanda tangan pemustaka bergaya tulisan tangan autentik (*Caveat font*), pita magnetik grafis (*magnetic stripe*), barcode mesin pemindai barcode (*Code 128 style*), serta pasal tata tertib pemustaka.
 * **4 Pilihan Tema Kartu:**
-  * 🔴 *Crimson Gold* (Klasik & Elegan)
-  * 🟡 *Academic Gold* (Resmi & Prestisius)
-  * ⚪ *Ivory Clean* (Minimalis Modern)
-  * 🟢 *Emerald Green* (Natural & Eksklusif)
+  *  *Crimson Gold* (Klasik & Elegan)
+  *  *Academic Gold* (Resmi & Prestisius)
+  *  *Ivory Clean* (Minimalis Modern)
+  *  *Emerald Green* (Natural & Eksklusif)
 * **Mode Cetak Kartu Siap Pakai:** Dukungan pencetak dokumen terisolasi (*Isolated Card Print*) untuk langsung mencetak kartu ke mesin printer ID card atau menyimpannya ke format PDF.
 
 ---
 
-## 🏗️ Struktur Direktori
+##  Struktur Direktori
 
 ```text
 webFinal/
@@ -87,7 +87,7 @@ webFinal/
 
 ---
 
-## 🚀 Panduan Menjalankan
+##  Panduan Menjalankan
 
 ### 1. Menjalankan Langsung di Browser
 Cukup buka file `index.html` langsung di peramban web pilihan Anda.
@@ -104,7 +104,7 @@ Akses di `http://localhost:3000`.
 
 ---
 
-## 🔐 Kredensial Petugas Default
+##  Kredensial Petugas Default
 
 | Parameter | Kredensial |
 | :--- | :--- |
@@ -116,7 +116,7 @@ Akses di `http://localhost:3000`.
 
 ---
 
-## 🖨️ Tips Pencetakan Kartu Pemustaka (CR80)
+##  Tips Pencetakan Kartu Pemustaka (CR80)
 
 > [!TIP]
 > 1. Pada kotak dialog cetak browser (*Print Dialog*), pastikan mencentang opsi **"Background graphics"** (Grafis Latar Belakang) agar gradien warna tema, chip kartu, dan pita magnetik tercetak sempurna.
