@@ -27,7 +27,7 @@
 
 ---
 
-## ✨ Fitur Utama
+##  Fitur Utama
 
 ### 1. Portal Pendaftaran Mandiri (Public Registration)
 * **Formulir Terstruktur:** Formulir pendaftaran publik yang memfasilitasi input NIM/NIP, nama lengkap, kontak (email & telepon), kategori pemustaka, fakultas/unit kerja, dan alamat domisili.
