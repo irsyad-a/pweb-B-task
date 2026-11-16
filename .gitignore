@@ -4,3 +4,6 @@ vercel.json
 
 # Environment variables
 .env*
+
+# Backup archives
+backup-*.zip
