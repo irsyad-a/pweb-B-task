@@ -1,0 +1,447 @@
+﻿PRODUCT REQUIREMENTS DOCUMENT | PPDB ONLINE SMK NUSANTARA
+
+
+
+
+PRODUCT REQUIREMENTS DOCUMENT
+PPDB ONLINE
+SMK NUSANTARA
+
+Dokumen kebutuhan produk dan panduan pengembangan aplikasi web
+
+Platform: Web Application
+Backend: PHP | Database: MySQL
+Frontend: HTML, CSS, Bootstrap 5, JavaScript
+
+Mata Kuliah: Web Back End
+________________
+
+
+Informasi Dokumen
+Atribut
+	Keterangan
+	Nama Produk
+	PPDB Online SMK Nusantara
+	Jenis Dokumen
+	Product Requirements Document (PRD)
+	Versi
+	1.0
+	Platform
+	Aplikasi web
+	Backend
+	PHP
+	Database
+	MySQL
+	Frontend
+	HTML, CSS, Bootstrap 5, JavaScript
+	Web Server
+	Apache / XAMPP
+	Target Pengguna
+	Calon siswa dan admin sekolah
+	
+
+1. Pendahuluan
+1.1 Latar Belakang
+Penerimaan Peserta Didik Baru (PPDB) merupakan proses administrasi yang dilakukan sekolah untuk menerima calon siswa baru setiap tahun ajaran. Proses konvensional berbasis formulir kertas dapat menyebabkan rekapitulasi lambat, risiko kehilangan atau duplikasi data, kesulitan pengelolaan dokumen, serta keterlambatan verifikasi dan pelaporan. SMK Nusantara membutuhkan aplikasi PPDB Online berbasis web agar calon siswa dapat mendaftar secara daring dan admin dapat mengelola serta memantau proses penerimaan.
+1.2 Tujuan Produk
+1. Mempermudah calon siswa melakukan pendaftaran.
+2. Menyimpan data calon siswa secara terstruktur menggunakan MySQL.
+3. Memfasilitasi pemilihan jurusan.
+4. Mempermudah admin melakukan verifikasi pendaftaran.
+5. Menyediakan informasi status seleksi.
+6. Menghasilkan laporan pendaftar berdasarkan jurusan dan status.
+1.3 Target Pengguna
+Pengguna
+	Deskripsi dan kebutuhan
+	Calon siswa
+	Lulusan SMP/MTs yang dapat registrasi, login, mengisi formulir, mengunggah dokumen, dan memantau status.
+	Admin sekolah
+	Petugas PPDB yang mengelola data calon siswa, jurusan, verifikasi, seleksi, pengumuman, dan laporan.
+	
+
+2. Ruang Lingkup Produk (Product Scope)
+2.1 Fitur Utama
+No.
+	Modul
+	Fitur
+	1
+	Autentikasi
+	Registrasi dan login
+	2
+	Dashboard
+	Ringkasan informasi PPDB
+	3
+	Profil siswa
+	Pengelolaan biodata
+	4
+	Pendaftaran
+	Pengisian formulir PPDB
+	5
+	Jurusan
+	Pemilihan program keahlian
+	6
+	Upload dokumen
+	Unggah berkas persyaratan
+	7
+	Verifikasi
+	Pemeriksaan data oleh admin
+	8
+	Seleksi
+	Pengelolaan hasil seleksi
+	9
+	Pengumuman
+	Informasi status penerimaan
+	10
+	Laporan
+	Rekapitulasi data pendaftar
+	
+
+2.2 Batasan Pengembangan (MVP)
+MVP (Minimum Viable Product) merupakan versi awal aplikasi yang memuat fitur inti agar alur pendaftaran dapat diuji.
+Tahap 1 — Fitur Dasar
+* Registrasi dan login.
+* Pengelolaan biodata siswa.
+* Pengelolaan jurusan.
+* Formulir pendaftaran.
+* Penyimpanan data ke MySQL.
+* CRUD data siswa.
+* Dashboard admin.
+* Verifikasi status pendaftaran.
+Tahap 2 — Pengembangan Lanjutan
+* Upload dokumen persyaratan.
+* Pengelolaan kuota jurusan.
+* Seleksi berdasarkan kriteria.
+* Pengumuman hasil seleksi.
+* Cetak bukti pendaftaran.
+* Ekspor laporan ke Excel atau PDF.
+Pembayaran online, integrasi Dapodik, dan integrasi layanan eksternal tidak termasuk dalam ruang lingkup MVP.
+3. Kebutuhan Fungsional (Functional Requirements)
+3.1 Registrasi dan Login
+FR-001 — Registrasi akun: Sistem menyediakan formulir dengan nama lengkap, email, password, dan konfirmasi password. Sistem memvalidasi data, memastikan email unik, melakukan hash password, menyimpan akun, dan menampilkan notifikasi keberhasilan.
+FR-002 — Login: Pengguna memasukkan email dan password. Sistem memeriksa kredensial dan mengarahkan pengguna berdasarkan role: admin ke Dashboard Admin dan calon siswa ke Dashboard Siswa.
+FR-003 — Logout: Sistem menyediakan fitur logout untuk mengakhiri session pengguna.
+3.2 Dashboard Siswa
+Dashboard siswa: Menampilkan nama calon siswa, nomor pendaftaran, status, jurusan pilihan, jadwal PPDB, dan notifikasi pengumuman.
+3.3 Biodata Siswa
+Pengelolaan biodata: Calon siswa dapat mengisi dan memperbarui NISN, nama lengkap, jenis kelamin, tempat dan tanggal lahir, alamat, asal sekolah, nomor HP, dan email. Sistem memvalidasi field wajib dan format data.
+3.4 Data Jurusan
+Pengelolaan jurusan: Admin dapat menampilkan, menambah, mengubah, menonaktifkan jurusan, dan mengatur kuota. Contoh jurusan: RPL, TKJ, Akuntansi (AKL), Tata Boga (TBG), dan Teknik Kendaraan Ringan (TKR).
+3.5 Pendaftaran
+Pengajuan pendaftaran: Calon siswa melengkapi biodata, memilih jurusan, mengirim formulir, dan menerima nomor pendaftaran. Sistem memvalidasi kelengkapan dan menyimpan data ke MySQL.
+Ketentuan: Siswa harus login, biodata wajib lengkap, satu siswa hanya boleh memiliki satu pendaftaran per tahun ajaran pada MVP, dan perubahan data setelah pengiriman dibatasi selama verifikasi.
+3.6 Upload Dokumen
+Unggah dokumen: Calon siswa dapat mengunggah KK, akta kelahiran, rapor, dan pas foto. Format yang diizinkan JPG, JPEG, PNG, atau PDF dengan batas contoh 2 MB per file. Server memvalidasi tipe dan ukuran; file disimpan dengan nama aman dan tidak diletakkan di direktori publik tanpa otorisasi.
+3.7 Verifikasi Pendaftaran
+Verifikasi oleh admin: Admin melihat detail pendaftaran, memeriksa biodata dan dokumen, menyetujui verifikasi, menolak atau meminta perbaikan, serta memberikan catatan. Status: Menunggu, Diverifikasi, Diterima, dan Ditolak. Perubahan status dicatat.
+3.8 Pengumuman Seleksi
+Pengumuman hasil: Admin mengelola hasil seleksi. Sistem menampilkan nomor pendaftaran, nama, jurusan, status penerimaan, dan tanggal pengumuman. Calon siswa melihat hasil melalui dashboard.
+3.9 Laporan
+Laporan PPDB: Admin melihat total pendaftar, jumlah per jurusan, jenis kelamin, status, serta jumlah diterima dan ditolak. Sistem menyediakan pencarian, filter, dan ekspor.
+4. Kebutuhan Non-Fungsional
+Kategori
+	Kebutuhan
+	Performance
+	Halaman dimuat dengan cepat pada kondisi penggunaan normal.
+	Security
+	Password disimpan menggunakan password_hash().
+	Authentication
+	Menggunakan session dan autentikasi pengguna.
+	Authorization
+	Hak akses dibedakan berdasarkan role.
+	Database
+	MySQL dengan relasi antartabel.
+	Validation
+	Validasi dilakukan di sisi server.
+	SQL Security
+	Menggunakan PDO Prepared Statement.
+	Responsive
+	Mendukung desktop, tablet, dan smartphone.
+	Usability
+	Antarmuka mudah dipahami.
+	Data Integrity
+	Menggunakan Primary Key, Foreign Key, dan transaksi database.
+	Backup
+	Database dapat dicadangkan dan dipulihkan.
+	
+
+5. Desain Database
+Nama database: db_ppdb_smk.
+5.1 Daftar Tabel
+No.
+	Tabel
+	Fungsi
+	1
+	users
+	Menyimpan akun pengguna.
+	2
+	siswa
+	Menyimpan biodata calon siswa.
+	3
+	jurusan
+	Menyimpan data jurusan.
+	4
+	pendaftaran
+	Menyimpan transaksi pendaftaran dan status.
+	5
+	berkas
+	Menyimpan metadata dokumen.
+	6
+	riwayat_status
+	Menyimpan riwayat perubahan status.
+	
+
+5.2 Struktur Entitas
+Tabel
+	Field utama
+	users
+	id_user (PK), nama, email, password, role
+	siswa
+	id_siswa (PK), id_user (FK), nisn, nama_lengkap, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat, asal_sekolah, no_hp
+	jurusan
+	id_jurusan (PK), kode_jurusan, nama_jurusan, kuota, deskripsi
+	pendaftaran
+	id_pendaftaran (PK), id_siswa (FK), id_jurusan (FK), tahun_ajaran, tanggal_daftar, status
+	berkas
+	id_berkas (PK), id_pendaftaran (FK), jenis_berkas, nama_file, tanggal_upload
+	riwayat_status
+	id_riwayat (PK), id_pendaftaran (FK), status_sebelumnya, status_baru, catatan, id_admin (FK), tanggal_perubahan
+	
+
+5.3 Relasi Database
+* Users 1:1 Siswa.
+* Siswa 1:N Pendaftaran.
+* Jurusan 1:N Pendaftaran.
+* Pendaftaran 1:N Berkas.
+* Pendaftaran 1:N Riwayat_Status.
+* Users (Admin) 1:N Riwayat_Status.
+Catatan desain: hubungan Users–Siswa menggunakan satu akun untuk satu biodata. Jika sekolah mengizinkan lebih dari satu pilihan jurusan, desain perlu diperluas dengan tabel pilihan_jurusan atau mekanisme pilihan yang sesuai.
+6. User Interface Requirements
+6.1 Halaman Publik
+Halaman
+	Komponen
+	Homepage
+	Informasi sekolah dan PPDB
+	Informasi jurusan
+	Daftar program keahlian
+	Persyaratan
+	Informasi dokumen
+	Jadwal PPDB
+	Jadwal pendaftaran
+	Login
+	Form login
+	Registrasi
+	Form pembuatan akun
+	
+
+6.2 Halaman Calon Siswa
+Halaman
+	Komponen
+	Dashboard
+	Ringkasan pendaftaran
+	Biodata
+	Form biodata siswa
+	Pendaftaran
+	Form pemilihan jurusan
+	Upload berkas
+	Form unggah dokumen
+	Status pendaftaran
+	Informasi verifikasi
+	Pengumuman
+	Hasil seleksi
+	Profil
+	Informasi akun
+	
+
+6.3 Halaman Admin
+Halaman
+	Komponen
+	Dashboard
+	Statistik PPDB
+	Data siswa
+	Tabel calon siswa
+	Data jurusan
+	CRUD jurusan
+	Data pendaftaran
+	Daftar pendaftar
+	Verifikasi
+	Pemeriksaan data
+	Seleksi
+	Pengelolaan hasil seleksi
+	Pengumuman
+	Pengelolaan pengumuman
+	Laporan
+	Rekapitulasi data
+	Pengaturan
+	Tahun ajaran dan periode PPDB
+	
+
+7. User Flow
+7.1 Alur Calon Siswa
+7. Membuka website PPDB.
+8. Membaca informasi sekolah.
+9. Membuat akun.
+10. Login ke aplikasi.
+11. Mengisi biodata.
+12. Memilih jurusan.
+13. Mengunggah dokumen.
+14. Mengirim pendaftaran.
+15. Memantau status verifikasi.
+16. Melihat hasil seleksi.
+7.2 Alur Admin
+17. Login sebagai admin.
+18. Membuka dashboard.
+19. Melihat statistik pendaftar.
+20. Mengelola data jurusan.
+21. Memeriksa pendaftaran.
+22. Memverifikasi dokumen.
+23. Memperbarui status.
+24. Mengelola hasil seleksi.
+25. Membuat laporan PPDB.
+8. Business Rules
+26. Setiap pengguna memiliki akun dengan email unik.
+27. Password harus disimpan dalam bentuk hash.
+28. Setiap akun siswa hanya memiliki satu biodata.
+29. NISN harus unik.
+30. Siswa harus login untuk melakukan pendaftaran.
+31. Siswa wajib melengkapi biodata sebelum mengirim pendaftaran.
+32. Setiap siswa hanya dapat melakukan satu pendaftaran per tahun ajaran pada MVP.
+33. Setiap pendaftaran harus memiliki jurusan pilihan.
+34. Status pendaftaran hanya dapat diubah oleh admin yang berwenang.
+35. Jumlah siswa diterima tidak boleh melebihi kuota jurusan.
+36. Data yang sudah diverifikasi tidak boleh diubah tanpa prosedur koreksi.
+37. Setiap perubahan status harus tercatat dalam riwayat.
+9. Acceptance Criteria
+No.
+	Pengujian
+	Kriteria Keberhasilan
+	1
+	Registrasi
+	Akun berhasil disimpan ke MySQL.
+	2
+	Login
+	Pengguna diarahkan sesuai role.
+	3
+	Biodata
+	Data siswa berhasil disimpan.
+	4
+	Pemilihan jurusan
+	Jurusan tersedia dan dapat dipilih.
+	5
+	Pendaftaran
+	Nomor pendaftaran berhasil dibuat.
+	6
+	Upload berkas
+	Dokumen valid berhasil diunggah.
+	7
+	Verifikasi
+	Admin dapat mengubah status.
+	8
+	Pengumuman
+	Siswa dapat melihat hasil seleksi.
+	9
+	Dashboard
+	Statistik sesuai data database.
+	10
+	Laporan
+	Data dapat difilter dan diekspor.
+	
+
+10. Technical Architecture
+10.1 Teknologi
+Layer
+	Teknologi
+	Presentation
+	HTML, CSS, Bootstrap 5
+	Interaction
+	JavaScript
+	Application
+	PHP
+	Database
+	MySQL
+	Database Administration
+	phpMyAdmin
+	Web Server
+	Apache
+	Development Environment
+	XAMPP
+	
+
+10.2 Struktur Folder Aplikasi
+ppdb-smk/
+├── config/
+│   └── database.php
+├── auth/
+│   ├── login.php
+│   ├── register.php
+│   └── logout.php
+├── siswa/
+│   ├── dashboard.php
+│   ├── biodata.php
+│   ├── pendaftaran.php
+│   ├── upload_berkas.php
+│   └── status.php
+├── admin/
+│   ├── dashboard.php
+│   ├── siswa.php
+│   ├── jurusan.php
+│   ├── verifikasi.php
+│   ├── seleksi.php
+│   └── laporan.php
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── uploads/
+└── index.php
+11. Project Milestones
+Tahap
+	Aktivitas
+	Output
+	1
+	Analisis kebutuhan
+	Dokumen PRD
+	2
+	Database design
+	ERD dan SQL
+	3
+	UI Design
+	Wireframe dan desain halaman
+	4
+	Database implementation
+	Database MySQL
+	5
+	Backend development
+	PHP dan CRUD
+	6
+	Frontend integration
+	Halaman aplikasi
+	7
+	Testing
+	Hasil pengujian
+	8
+	Deployment
+	Aplikasi siap digunakan
+	
+
+12. Deliverable Project
+38. Dokumen PRD.
+39. ERD database.
+40. File database SQL.
+41. Desain UI/UX.
+42. Source code PHP.
+43. Implementasi CRUD.
+44. Dokumentasi pengujian.
+45. Screenshot aplikasi.
+46. Presentasi hasil project.
+13. Indikator Keberhasilan Produk
+* Calon siswa dapat mendaftar secara online.
+* Data tersimpan dengan benar di MySQL.
+* Admin dapat mengelola seluruh data pendaftar.
+* Proses verifikasi dapat berjalan.
+* Hasil seleksi dapat ditampilkan.
+* Laporan pendaftaran dapat dihasilkan.
+* Aplikasi memiliki validasi dan pengamanan dasar.
+14. Penutup
+PPDB Online SMK Nusantara merupakan studi kasus pengembangan aplikasi Web Back End yang mengintegrasikan PHP dan MySQL. Melalui proyek ini, mahasiswa mempelajari siklus pengembangan perangkat lunak mulai dari analisis kebutuhan, perancangan database, implementasi CRUD, pengelolaan autentikasi, integrasi frontend dan backend, hingga pengujian aplikasi.
+Fokus utama pembelajaran adalah membangun aplikasi web dengan struktur database relasional, proses pengolahan data yang benar, serta fitur Back End yang dapat digunakan secara nyata.
+PRD PPDB Online SMK Nusantara
