@@ -14,9 +14,9 @@ CREATE TABLE `admin_users` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Password default: admin123 (hash password_hash / md5 fallback)
+-- Password default: admin123 (hash bcrypt dari password_hash)
 INSERT INTO `admin_users` (`username`, `password`, `nama_lengkap`) VALUES
-('admin', '$2y$10$QjB5Z5fGZ9iQz8e5wF8Hteh6Y1qgC8jT7K0kG7uY4lB7i.Vp1r8Qe', 'Admin');
+('admin', '$2y$12$ceOMLrBpXSegiX/6qdnOduJbYAIj3VkcPhJIQe1bp66N.vT0SpXay', 'Admin');
 
 -- 2. Tabel Program Studi
 DROP TABLE IF EXISTS `program_studi`;
