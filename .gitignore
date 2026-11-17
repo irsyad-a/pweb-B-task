@@ -7,3 +7,4 @@ vercel.json
 
 # Backup archives
 backup-*.zip
+*-hosting.zip
